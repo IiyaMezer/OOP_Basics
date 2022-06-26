@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-26T03:32:12.471Z" agent="5.0 (Windows)" etag="XQEb8QdXFmAAFxOM20K-" version="20.0.3" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-06-26T03:36:07.935Z" agent="5.0 (Windows)" etag="q-PSIgty8Crucf_gvngN" version="20.0.3" type="github" pages="2">
   <diagram id="dVzvfFkbXNE0rDsR5Hri" name="Page-1">
     <mxGraphModel dx="1944" dy="943" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -217,11 +217,6 @@
             <mxPoint x="310" y="240" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="heKlghzo4CzTLohx4eLl-10" value="Готовая деталь" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0;exitY=0.95;rounded=0;sketch=0;fontSize=8;strokeWidth=1;" edge="1" source="heKlghzo4CzTLohx4eLl-8" parent="1" target="heKlghzo4CzTLohx4eLl-3">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="130" y="396" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="heKlghzo4CzTLohx4eLl-14" value="Загрузка УП" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;sketch=0;fontSize=8;strokeWidth=1;entryX=-0.035;entryY=0.057;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="heKlghzo4CzTLohx4eLl-3" target="heKlghzo4CzTLohx4eLl-8">
           <mxGeometry x="-0.0664" relative="1" as="geometry">
             <mxPoint x="50.11538461538464" y="130" as="sourcePoint" />
@@ -233,7 +228,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="heKlghzo4CzTLohx4eLl-28" value="Система обратной связи" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;comic=0;fontSize=8;" vertex="1" parent="1">
-          <mxGeometry x="364" y="20" width="106" height="510" as="geometry" />
+          <mxGeometry x="364" y="20" width="106" height="470" as="geometry" />
         </mxCell>
         <mxCell id="heKlghzo4CzTLohx4eLl-32" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=8;startArrow=open;startFill=0;endArrow=none;endFill=0;strokeWidth=1;" edge="1" parent="heKlghzo4CzTLohx4eLl-28" source="heKlghzo4CzTLohx4eLl-29" target="heKlghzo4CzTLohx4eLl-28">
           <mxGeometry relative="1" as="geometry" />
@@ -279,7 +274,7 @@
         <mxCell id="heKlghzo4CzTLohx4eLl-40" value="While (Программные координаты != координаты в системе обратной связи)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
           <mxGeometry x="414" y="160" width="300" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="heKlghzo4CzTLohx4eLl-42" value="if (P шпинделя &amp;lt; Pmax&amp;nbsp; &amp;amp; P сервоприводов &amp;lt;&amp;nbsp; Pmax &amp;amp; T узлов &amp;lt; Tmax&amp;nbsp; &amp;amp;&amp;nbsp; L &amp;gt;L min )" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
+        <mxCell id="heKlghzo4CzTLohx4eLl-42" value="if (P шпинделя &amp;lt; Pmax&amp;nbsp; &amp;amp; P сервоприводов &amp;lt;&amp;nbsp; Pmax&amp;nbsp; &amp;amp; T узлов &amp;lt; Tmax&amp;nbsp; &amp;amp;&amp;nbsp; L &amp;gt;L min )" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
           <mxGeometry x="430" y="180" width="310" height="20" as="geometry" />
         </mxCell>
         <mxCell id="heKlghzo4CzTLohx4eLl-47" value="Экстренная основка отработки УП" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
