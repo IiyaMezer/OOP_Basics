@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-26T03:36:07.935Z" agent="5.0 (Windows)" etag="q-PSIgty8Crucf_gvngN" version="20.0.3" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-06-26T03:37:50.065Z" agent="5.0 (Windows)" etag="vmqTHcy_BbnHkVH1ZCrd" version="20.0.3" type="github" pages="2">
   <diagram id="dVzvfFkbXNE0rDsR5Hri" name="Page-1">
     <mxGraphModel dx="1944" dy="943" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -237,7 +237,7 @@
           <mxGeometry x="46" y="100" width="10" height="360" as="geometry" />
         </mxCell>
         <mxCell id="heKlghzo4CzTLohx4eLl-33" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;comic=0;fontSize=8;" vertex="1" parent="heKlghzo4CzTLohx4eLl-28">
-          <mxGeometry x="50" y="130" width="10" height="320" as="geometry" />
+          <mxGeometry x="50" y="130" width="10" height="220" as="geometry" />
         </mxCell>
         <mxCell id="heKlghzo4CzTLohx4eLl-41" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;comic=0;fontSize=8;" vertex="1" parent="heKlghzo4CzTLohx4eLl-28">
           <mxGeometry x="56" y="160" width="10" height="70" as="geometry" />
@@ -259,11 +259,11 @@
             <mxPoint x="340" y="120" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="heKlghzo4CzTLohx4eLl-36" value="Сервоприводы включены" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
-          <mxGeometry x="430" y="210" width="120" height="20" as="geometry" />
+        <mxCell id="heKlghzo4CzTLohx4eLl-36" value="Сервоприводы включены и продолжают движение до заданой точки " style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="429" y="210" width="270" height="20" as="geometry" />
         </mxCell>
         <mxCell id="heKlghzo4CzTLohx4eLl-37" value="&lt;div&gt;Расчет действительного положения инструмента по оптической линейке и согласно относительно нагрузки сервоприводы(P).&lt;/div&gt;&lt;div&gt;Котроль температуры(T) и уровня смазки(l)&lt;br&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;comic=0;fontSize=8;size=10;" vertex="1" parent="1">
-          <mxGeometry x="450" y="80" width="140" height="60" as="geometry" />
+          <mxGeometry x="494" y="60" width="140" height="60" as="geometry" />
         </mxCell>
         <mxCell id="heKlghzo4CzTLohx4eLl-38" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;sketch=0;fontSize=8;entryX=0;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="heKlghzo4CzTLohx4eLl-29" target="heKlghzo4CzTLohx4eLl-37">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -282,6 +282,9 @@
         </mxCell>
         <mxCell id="heKlghzo4CzTLohx4eLl-48" value="break " style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
           <mxGeometry x="460" y="265" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-53" value="Переход к следующему кадру" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="415" y="390" width="130" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
