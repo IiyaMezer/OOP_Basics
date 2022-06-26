@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-26T03:37:50.065Z" agent="5.0 (Windows)" etag="vmqTHcy_BbnHkVH1ZCrd" version="20.0.3" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-06-26T03:43:23.594Z" agent="5.0 (Windows)" etag="5RATx0d5r00vpMNODstk" version="20.0.3" type="github" pages="2">
   <diagram id="dVzvfFkbXNE0rDsR5Hri" name="Page-1">
     <mxGraphModel dx="1944" dy="943" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -195,7 +195,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="8hUOyyNjZq5Cz5BXrL1u" name="Page-2">
-    <mxGraphModel dx="1053" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1016" dy="511" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -254,6 +254,9 @@
             <mxPoint x="-20" y="320" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-48" value="break " style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="heKlghzo4CzTLohx4eLl-28">
+          <mxGeometry x="66" y="255" width="40" height="20" as="geometry" />
+        </mxCell>
         <mxCell id="heKlghzo4CzTLohx4eLl-30" value="&lt;div&gt;Передача координат по программе&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;rounded=0;sketch=0;fontSize=8;strokeWidth=1;" edge="1" target="heKlghzo4CzTLohx4eLl-29" parent="1" source="heKlghzo4CzTLohx4eLl-8">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="340" y="120" as="sourcePoint" />
@@ -262,7 +265,7 @@
         <mxCell id="heKlghzo4CzTLohx4eLl-36" value="Сервоприводы включены и продолжают движение до заданой точки " style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
           <mxGeometry x="429" y="210" width="270" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="heKlghzo4CzTLohx4eLl-37" value="&lt;div&gt;Расчет действительного положения инструмента по оптической линейке и согласно относительно нагрузки сервоприводы(P).&lt;/div&gt;&lt;div&gt;Котроль температуры(T) и уровня смазки(l)&lt;br&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;comic=0;fontSize=8;size=10;" vertex="1" parent="1">
+        <mxCell id="heKlghzo4CzTLohx4eLl-37" value="&lt;div&gt;Расчет действительного положения инструмента по оптической линейке и согласно относительно нагрузки сервоприводы(P).&lt;/div&gt;&lt;div&gt;Котроль температуры(T) и уровня смазки(L)&lt;br&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;comic=0;fontSize=8;size=10;" vertex="1" parent="1">
           <mxGeometry x="494" y="60" width="140" height="60" as="geometry" />
         </mxCell>
         <mxCell id="heKlghzo4CzTLohx4eLl-38" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;sketch=0;fontSize=8;entryX=0;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="heKlghzo4CzTLohx4eLl-29" target="heKlghzo4CzTLohx4eLl-37">
@@ -277,14 +280,20 @@
         <mxCell id="heKlghzo4CzTLohx4eLl-42" value="if (P шпинделя &amp;lt; Pmax&amp;nbsp; &amp;amp; P сервоприводов &amp;lt;&amp;nbsp; Pmax&amp;nbsp; &amp;amp; T узлов &amp;lt; Tmax&amp;nbsp; &amp;amp;&amp;nbsp; L &amp;gt;L min )" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
           <mxGeometry x="430" y="180" width="310" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="heKlghzo4CzTLohx4eLl-47" value="Экстренная основка отработки УП" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
-          <mxGeometry x="420" y="285" width="150" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="heKlghzo4CzTLohx4eLl-48" value="break " style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
-          <mxGeometry x="460" y="265" width="40" height="20" as="geometry" />
+        <mxCell id="heKlghzo4CzTLohx4eLl-47" value="&lt;div&gt;Экстренная остановка отработки УП, &lt;br&gt;&lt;/div&gt;&lt;div&gt;СТОП шпинделя и блокировка приводов&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="420" y="285" width="170" height="30" as="geometry" />
         </mxCell>
         <mxCell id="heKlghzo4CzTLohx4eLl-53" value="Переход к следующему кадру" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
           <mxGeometry x="415" y="390" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-54" value="&lt;font color=&quot;#CC0000&quot;&gt;Скорее всего, следовало представить обработку обработку критических условий (P, T, L) не как if, а как блок try&amp;nbsp; cach и в него поместить цикл While&lt;/font&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;comic=0;fontSize=8;size=10;" vertex="1" parent="1">
+          <mxGeometry x="610" y="305" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-57" value="Готовая деталь" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;sketch=0;fontSize=8;fontColor=#000000;strokeWidth=1;" edge="1" parent="1" source="heKlghzo4CzTLohx4eLl-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="460" as="sourcePoint" />
+            <mxPoint x="50" y="460" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
