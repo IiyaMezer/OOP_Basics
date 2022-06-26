@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-26T02:18:58.439Z" agent="5.0 (Windows)" etag="I_pkJQE8Cz-plBBScAK0" version="20.0.3" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-06-26T03:30:02.335Z" agent="5.0 (Windows)" etag="Ish17zaYy05b6zLoCCGy" version="20.0.3" type="github" pages="2">
   <diagram id="dVzvfFkbXNE0rDsR5Hri" name="Page-1">
     <mxGraphModel dx="1944" dy="943" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -195,10 +195,96 @@
     </mxGraphModel>
   </diagram>
   <diagram id="8hUOyyNjZq5Cz5BXrL1u" name="Page-2">
-    <mxGraphModel dx="782" dy="660" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1053" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="heKlghzo4CzTLohx4eLl-1" value="Станок с ЧПУ(стойка управления)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;comic=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="130" y="20" width="150" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-8" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;comic=0;fontSize=8;" vertex="1" parent="heKlghzo4CzTLohx4eLl-1">
+          <mxGeometry x="70" y="70" width="10" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-3" value="&lt;div&gt;Оператор&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;comic=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="20" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-5" value="Обработка детали по Управляющей программе" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;comic=0;fontSize=8;size=10;" vertex="1" parent="1">
+          <mxGeometry x="224" y="60" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-6" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;sketch=0;fontSize=8;exitX=0.043;exitY=0.975;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="heKlghzo4CzTLohx4eLl-5" target="heKlghzo4CzTLohx4eLl-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="290" as="sourcePoint" />
+            <mxPoint x="310" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-10" value="Готовая деталь" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0;exitY=0.95;rounded=0;sketch=0;fontSize=8;strokeWidth=1;" edge="1" source="heKlghzo4CzTLohx4eLl-8" parent="1" target="heKlghzo4CzTLohx4eLl-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="396" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-14" value="Загрузка УП" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;sketch=0;fontSize=8;strokeWidth=1;entryX=-0.035;entryY=0.057;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="heKlghzo4CzTLohx4eLl-3" target="heKlghzo4CzTLohx4eLl-8">
+          <mxGeometry x="-0.0664" relative="1" as="geometry">
+            <mxPoint x="50.11538461538464" y="130" as="sourcePoint" />
+            <mxPoint x="200" y="130" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="140" y="115" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-28" value="Система обратной связи" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;comic=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="364" y="20" width="106" height="510" as="geometry" />
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-32" style="edgeStyle=none;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=8;startArrow=open;startFill=0;endArrow=none;endFill=0;strokeWidth=1;" edge="1" parent="heKlghzo4CzTLohx4eLl-28" source="heKlghzo4CzTLohx4eLl-29" target="heKlghzo4CzTLohx4eLl-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-29" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;comic=0;fontSize=8;" vertex="1" parent="heKlghzo4CzTLohx4eLl-28">
+          <mxGeometry x="46" y="100" width="10" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-33" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;comic=0;fontSize=8;" vertex="1" parent="heKlghzo4CzTLohx4eLl-28">
+          <mxGeometry x="50" y="130" width="10" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-41" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;comic=0;fontSize=8;" vertex="1" parent="heKlghzo4CzTLohx4eLl-28">
+          <mxGeometry x="56" y="160" width="10" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-43" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;comic=0;fontSize=8;" vertex="1" parent="heKlghzo4CzTLohx4eLl-28">
+          <mxGeometry x="56" y="255" width="10" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-44" value="else" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="heKlghzo4CzTLohx4eLl-28">
+          <mxGeometry x="66" y="245" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-46" value="Сообщение об ошибке" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;sketch=0;fontSize=8;strokeWidth=1;" edge="1" parent="heKlghzo4CzTLohx4eLl-28" target="heKlghzo4CzTLohx4eLl-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60" y="320" as="sourcePoint" />
+            <mxPoint x="-20" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-30" value="&lt;div&gt;Передача координат по программе&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;rounded=0;sketch=0;fontSize=8;strokeWidth=1;" edge="1" target="heKlghzo4CzTLohx4eLl-29" parent="1" source="heKlghzo4CzTLohx4eLl-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="120" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-36" value="Сервоприводы включены" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="430" y="210" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-37" value="&lt;div&gt;Расчет действительного положения инструмента по оптической линейке и согласно относительно нагрузки сервоприводы(P).&lt;/div&gt;&lt;div&gt;Котроль температуры(T) и уровня смазки(l)&lt;br&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;comic=0;fontSize=8;size=10;" vertex="1" parent="1">
+          <mxGeometry x="450" y="80" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-38" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;sketch=0;fontSize=8;entryX=0;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="heKlghzo4CzTLohx4eLl-29" target="heKlghzo4CzTLohx4eLl-37">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="350" as="sourcePoint" />
+            <mxPoint x="430" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-40" value="While (Программные координаты != координаты в системе обратной связи)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="414" y="160" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-42" value="if (P шпинделя &amp;lt; Pmax&amp;nbsp; &amp;amp; P сервоприводов &amp;lt;&amp;nbsp; Pmax &amp;amp; T узлов &amp;lt; Tmax&amp;nbsp; &amp;amp;&amp;nbsp; L &amp;gt;L min )" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="430" y="180" width="310" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="heKlghzo4CzTLohx4eLl-47" value="Экстренная основка отработки УП" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="430" y="290" width="150" height="20" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
