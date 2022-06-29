@@ -25,10 +25,6 @@ namespace HW_2.Account;
    
     public void Writeinfo(int id, decimal cash, TypeEnum type)
     {
-        int Id = _Id;
-        decimal Cash = _Cash;
-        TypeEnum Type = type;
-
         Console.WriteLine($"Номер счета: {id};");
         Console.WriteLine($"Баланс {cash} руб. ;");
         Console.WriteLine($"Тип {type};");
