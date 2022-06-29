@@ -7,23 +7,21 @@ namespace HW_2.Account;
     private TypeEnum _Type;
 
     public int Id
-        {
-            get => _Id;
-            set => _Id = value;
-        }
+    {
+        get => _Id;
+        set => _Id = value;
+    }
     public decimal Cash
-        {
-            get => _Cash;
-            set => _Cash = value;
-        }
+    {
+        get => _Cash;
+        set => _Cash = value;
+    }
 
     public TypeEnum Type
     {
         get => _Type;
         set => _Type = value;
     }
-
-
    
     public void Writeinfo(int id, decimal cash, TypeEnum type)
     {
@@ -31,13 +29,10 @@ namespace HW_2.Account;
         decimal Cash = _Cash;
         TypeEnum Type = type;
 
-
         Console.WriteLine($"Номер счета: {id};");
         Console.WriteLine($"Баланс {cash} руб. ;");
         Console.WriteLine($"Тип {type};");
         Console.WriteLine("");
     }
-
-
-    }
+ }
 
