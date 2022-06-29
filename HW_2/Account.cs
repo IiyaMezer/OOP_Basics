@@ -26,9 +26,14 @@
 
         public void Writeinfo(int id, decimal cash, int Type)
         {
-            Console.WriteLine()
+            int Id = _Id;
+            decimal Cash = _Cash;
+
+            Console.WriteLine($"Номер счета: {id};");
+            Console.WriteLine($"Баланс {cash};");
+            Console.WriteLine($"Тип {Type};");
         }
-        
+
 
     }
 }
