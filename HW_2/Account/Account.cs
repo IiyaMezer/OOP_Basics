@@ -1,7 +1,5 @@
-﻿namespace HW_2
-{
-    
-    internal class Account
+﻿namespace HW_2.Account;
+ internal class Account
     {
         private int _Id;
         private decimal _Cash;
@@ -11,29 +9,30 @@
             Normal = 2, //обычные условия
             Corp = 3, //корпоративные условия(зарплатная карта)
             Comp = 4, //счет компании
-        }  
+        }
 
         public int Id
-        { 
-            get => _Id; 
-            set => _Id = value; 
+        {
+            get => _Id;
+            set => _Id = value;
         }
-        public decimal Cash 
+        public decimal Cash
         {
             get => _Cash;
             set => _Cash = value;
         }
 
-        public void Writeinfo(int id, decimal cash, int Type)
+        public void Writeinfo(int id, decimal cash)
         {
             int Id = _Id;
             decimal Cash = _Cash;
 
             Console.WriteLine($"Номер счета: {id};");
             Console.WriteLine($"Баланс {cash};");
-            Console.WriteLine($"Тип {Type};");
+            //Console.WriteLine($"Тип {Type};");
+            Console.WriteLine("");
         }
 
 
     }
-}
+
