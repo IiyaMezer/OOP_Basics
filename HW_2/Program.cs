@@ -5,7 +5,6 @@ Acc1.Id = 111;
 Acc1.Cash = 5000000000000M;
 Acc1.Type = TypeEnum.VIP;
 
-
 AccountTask1 Acc2 = new();
 Acc2.Id = 222;
 Acc2.Cash = 4521547.22M;
