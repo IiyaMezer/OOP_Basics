@@ -1,6 +1,6 @@
 ﻿
 namespace HW_2.Account;
- internal class AccountTask1
+ internal class Account
  {
     private int _Id;
     private decimal _Cash;
