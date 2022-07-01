@@ -29,11 +29,11 @@ namespace HW_2.Account;
     }
 
    
-    public void Writeinfo(int id, decimal cash, TypeEnum type)
+    public void Writeinfo()
     {
         Console.WriteLine($"Номер счета: {id:d8};");
-        Console.WriteLine($"Баланс {cash} руб. ;");
-        Console.WriteLine($"Тип {type};");
+        Console.WriteLine($"Баланс {Cash} руб. ;");
+        Console.WriteLine($"Тип {Type};");
         Console.WriteLine("");
     }
  }
