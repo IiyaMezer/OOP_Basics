@@ -1,24 +1,15 @@
 ﻿using HW_2.Account;
 
-Account Acc1 = new();
-
-Acc1.Cash = 5000000000000M;
-Acc1.Type = TypeEnum.VIP;
+Account Acc1 = new(80000000M, TypeEnum.VIP);
 Acc1.Writeinfo();
 
-Account Acc2 = new();
-Acc2.Cash = 4521547.22M;
-Acc2.Type = TypeEnum.Normal;
+Account Acc2 = new(4566874351.55M, TypeEnum.Normal);
 Acc2.Writeinfo();
 
-Account Acc3 = new();
-Acc3.Cash = 123.01M;
-Acc3.Type = TypeEnum.Corp;
+Account Acc3 = new(123547896546M, TypeEnum.Corp);
 Acc3.Writeinfo();
 
-Account Acc4 = new();
-Acc4.Cash = 800265324;
-Acc4.Type = TypeEnum.Comp;
+Account Acc4 = new(4555555555555555, TypeEnum.Comp);
 Acc4.Writeinfo();
 
 

@@ -9,13 +9,15 @@ namespace HW_2.Account;
     public static int Id => id;
     
     /// <summary>
-    /// Счетчик
+    /// Счетчик + конструктор
     /// </summary>
-    public Account()
+    public Account(decimal cash, TypeEnum type)
     {
+        this._Type = type;
+        this._Cash = cash;
         id++;
     }
-    
+        
     public decimal Cash
     {
         get => _Cash;
