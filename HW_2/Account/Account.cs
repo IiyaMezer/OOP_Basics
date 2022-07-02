@@ -31,6 +31,23 @@ namespace HW_2.Account;
         set => _Type = value;
     }
 
+    public void CashOut (decimal money)
+    {
+        if (Cash < money)
+        {
+            Console.WriteLine("Not enough money");
+        }
+        else
+        {
+          Cash -= money;
+        }
+            
+    }
+    public void CashIn(decimal money)
+    {
+        Cash += money;       
+    }
+
    
     public void Writeinfo()
     {
