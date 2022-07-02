@@ -16,6 +16,7 @@ namespace HW_2.Account;
         this._Type = type;
         this._Cash = cash;
         id++;
+
     }
         
     public decimal Cash
