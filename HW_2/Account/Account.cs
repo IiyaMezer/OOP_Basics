@@ -3,20 +3,34 @@ namespace HW_2.Account;
  internal class Account
  {
     static int id = 0; //переменная для генератора ID
+
+    private int _Id; 
     private decimal _Cash;
     private TypeEnum _Type;
 
     public static int Id => id;
+
+    void IdGen()
+    {
+        id++;
+        _Id = id;
+    }
     
     /// <summary>
-    /// Счетчик + конструктор
+    /// конструктор
     /// </summary>
     public Account(decimal cash, TypeEnum type)
     {
         this._Type = type;
         this._Cash = cash;
-        id++;
 
+       IdGen();       
+
+    }
+
+    int ID
+    {
+        get => _Id;
     }
         
     public decimal Cash
@@ -51,7 +65,7 @@ namespace HW_2.Account;
    
     public void Writeinfo()
     {
-        Console.WriteLine($"Номер счета: {id:d8};");
+        Console.WriteLine($"Номер счета: {ID:d8};");
         Console.WriteLine($"Баланс {Cash} руб. ;");
         Console.WriteLine($"Тип {Type};");
         Console.WriteLine("");
