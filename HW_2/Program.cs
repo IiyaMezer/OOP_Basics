@@ -1,9 +1,9 @@
 ﻿using OOP_Basics.Account;
 
  Account Acc1 = new(10M, TypeEnum.VIP);
- Account Acc2 = new(4566874351.55M, TypeEnum.Normal);
- Account Acc3 = new(123547896546M, TypeEnum.Corp);
- Account Acc4 = new(4555555555555555, TypeEnum.Comp);
+ Account Acc2 = new(10M, TypeEnum.Normal);
+ Account Acc3 = new(10M, TypeEnum.Corp);
+ Account Acc4 = new(10M, TypeEnum.Comp);
 
 
 Console.WriteLine("========================");
