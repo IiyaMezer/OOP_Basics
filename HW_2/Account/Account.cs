@@ -10,6 +10,12 @@ namespace OOP_Basics.Account;
 
     public static int Id => id;
 
+    public void  Transfer (Account source, decimal amount)
+    {
+        source.Cash = source.Cash - amount;
+        _Cash += amount;                
+    }       
+
     void IdGen()
     {
         id++;
