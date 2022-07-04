@@ -1,5 +1,5 @@
 ﻿
-namespace HW_2.Account;
+namespace OOP_Basics.Account;
  internal class Account
  {
     static int id = 0; //переменная для генератора ID

@@ -1,4 +1,4 @@
-﻿using HW_2.Account;
+﻿using OOP_Basics.Account;
 
  Account Acc1 = new(10M, TypeEnum.VIP);
 
