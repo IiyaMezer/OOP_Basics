@@ -51,16 +51,26 @@ public class Building
     /// <summary>
     /// Высота этажа, принебрегаем наличием верхнего и нижнего сервисного этажа.
     /// </summary>
-    /// <param name="Build">Здание</param>
+    /// <param name="building">Здание</param>
     /// <returns></returns>
-    public static double FloorHeight(Building Build)
+    public static double FloorHeight(Building building)
     {
-        return ((double)Build.BuildHeight / Build.FloorAmount);
+        return ((double)building.BuildHeight / building.FloorAmount);
     }
 
-    public static int FlatInEntrance (Building Build)
+    /// <summary>
+    /// Количество квартир в одном пдьезде
+    /// </summary>
+    /// <param name="building"></param>
+    /// <returns></returns>
+    public static int FlatInEntrance (Building building)
     {
-        return (Build.FlatAmount / Build.EntranceAmount);
+        return (building.FlatAmount / building.EntranceAmount);
+    }
+
+    public static int FlatsOnFloor(Building building)
+    {
+        return (Building.FlatInEntrance(building) / building.FloorAmount);
     }
     #endregion
 
