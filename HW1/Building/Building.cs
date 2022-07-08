@@ -57,6 +57,11 @@ public class Building
     {
         return ((double)Build.BuildHeight / Build.FloorAmount);
     }
+
+    public static int FlatInEntrance (Building Build)
+    {
+        return (Build.FlatAmount / Build.EntranceAmount);
+    }
     #endregion
 
     public Building(int bulidHeight, int floorAmount, int flatAmount, int entranceAmount)
