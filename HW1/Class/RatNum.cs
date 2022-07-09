@@ -104,6 +104,11 @@ public class RatNum
         return r;
     }
 
+    public override string ToString()
+    {
+        return N + "/" + D ;
+    }
+
 
 
 
