@@ -38,28 +38,28 @@ public class RatNum
     {
         return (double)(X.N/X.D);
     }
-
+    //Булевы
     //Скорее всего это варварские методы, это я про промежуточный перевод в десятичную дробь, но я так вижу.
     public static bool operator == (RatNum r1, RatNum r2)
     {
-        return (RatNum.FractToDeg(r1) == RatNum.FractToDeg(r2));
+        return (RatNum.FractToDeg(r1) - RatNum.FractToDeg(r2) == 0 );
     }
     public static bool operator !=(RatNum r1, RatNum r2)
     {
-        return (RatNum.FractToDeg(r1) != RatNum.FractToDeg(r2));
+        return (RatNum.FractToDeg(r1) - RatNum.FractToDeg(r2) != 0);
     }
 
     public static bool operator > (RatNum r1, RatNum r2)
     {
-        return (RatNum.FractToDeg(r1) > RatNum.FractToDeg(r2));
+        return (RatNum.FractToDeg(r1) - RatNum.FractToDeg(r2) > 0);
     }
     public static bool operator <(RatNum r1, RatNum r2)
     {
-        return (RatNum.FractToDeg(r1) < RatNum.FractToDeg(r2));
+        return (RatNum.FractToDeg(r1) - RatNum.FractToDeg(r2) <0);
     }
 
 
-
+    //Арифметика
     public static RatNum operator + (RatNum r1 , RatNum r2)
     {
         return new RatNum((r1.N * r2.D)+ (r2.N * r1.D), r1.D * r2.D);
@@ -68,13 +68,13 @@ public class RatNum
     {
         return new RatNum((r1.N * r2.D) - (r2.N * r1.D), r1.D * r2.D);
     }
-    public static RatNum operator *(RatNum r1, RatNum r2)
+    public static RatNum operator * (RatNum r1, RatNum r2)
     {
-        return new RatNum(r1.N*r2.N,r1.D+r2.D);
+        return new RatNum(r1.N * r2.N, r1.D + r2.D);
     }
-    public static RatNum operator /(RatNum r1, RatNum r2)
+    public static RatNum operator / (RatNum r1, RatNum r2)
     {
-        return new RatNum(r1.N * r2.D, r1.D + r2.N);
+        return new RatNum(r1.N * r2.D, r1.D * r2.N);
     }
 
 
