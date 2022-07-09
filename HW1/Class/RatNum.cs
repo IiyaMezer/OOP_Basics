@@ -26,7 +26,7 @@ public class RatNum
     }
 
     /// <summary>
-    /// Переаод дроби в десятичный вид
+    /// Перевод дроби в десятичный вид.
     /// </summary>
     /// <param name="N">числитель</param>
     /// <param name="D">знаменатель</param>
@@ -34,6 +34,15 @@ public class RatNum
     private double FractToDeg(int N, int D)
     {
         return (double)(N/D);
+    }
+
+    public static bool operator == (RatNum r1, RatNum r2)
+    {
+        return (r1.N == r2.N && r1.D == r2.D);
+    }
+    public static bool operator !=(RatNum r1, RatNum r2)
+    {
+        return (r1.N != r2.N || r1.D != r2.D);
     }
 
 
