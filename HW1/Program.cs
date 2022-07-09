@@ -1,6 +1,6 @@
 ﻿using HW_5.Class;
 
-RatNum n1 = new(2, 5);
+RatNum n1 = new(2, 0);
 RatNum n2 = new(2, 6);
 RatNum n3 = new(2, 5);
 

@@ -42,20 +42,34 @@ public class RatNum
     //Скорее всего это варварские методы, это я про промежуточный перевод в десятичную дробь, но я так вижу.
     public static bool operator == (RatNum r1, RatNum r2)
     {
-        return (RatNum.FractToDeg(r1) - RatNum.FractToDeg(r2) == 0 );
+        return (r1.N/r1.D == r2.N / r2.D);
     }
+
+    public static bool Equals(RatNum r1, RatNum r2)
+    {
+        return (r1.N / r1.D == r2.N / r2.D);
+    }
+
     public static bool operator !=(RatNum r1, RatNum r2)
     {
-        return (RatNum.FractToDeg(r1) - RatNum.FractToDeg(r2) != 0);
+        return (r1.N / r1.D != r2.N / r2.D);
     }
 
     public static bool operator > (RatNum r1, RatNum r2)
     {
-        return (RatNum.FractToDeg(r1) - RatNum.FractToDeg(r2) > 0);
+        return (r1.N / r1.D > r2.N / r2.D);
     }
     public static bool operator <(RatNum r1, RatNum r2)
     {
-        return (RatNum.FractToDeg(r1) - RatNum.FractToDeg(r2) <0);
+        return (r1.N / r1.D < r2.N / r2.D);
+    }
+    public static bool operator <= (RatNum r1, RatNum r2)
+    {
+        return (r1.N / r1.D <= r2.N / r2.D);
+    }
+    public static bool operator >=(RatNum r1, RatNum r2)
+    {
+        return (r1.N / r1.D >= r2.N / r2.D);
     }
 
 
