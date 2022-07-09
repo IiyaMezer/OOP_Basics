@@ -91,6 +91,21 @@ public class RatNum
         return new RatNum(r1.N * r2.D, r1.D * r2.N);
     }
 
+    public static RatNum operator ++ (RatNum r)
+    {
+        r.D++;
+        r.N++;
+        return r;
+    }
+    public static RatNum operator --(RatNum r)
+    {
+        r.D--;
+        r.N--;
+        return r;
+    }
+
+
+
 
 
 }
