@@ -4,22 +4,22 @@ namespace HW_5.Class;
 
 public class RatNum
 {
-    private int _N; //числитель
-    private int _D; //знаменатель
+    private double _N; //числитель
+    private double _D; //знаменатель
 
-    public int N
+    public double N
     {
         get => _N;
         set => _N = value;
     }
 
-    public int D
+    public double D
     {
         get => _D;
         set => _D = value;
     }
 
-    public RatNum (int n, int d)
+    public RatNum (double n, double d)
     {
         if (d == 0)
             throw new ArgumentException("Знаменатель не должен быть равен 0."); // мы же пока в высшую математику не лезем.
@@ -57,7 +57,7 @@ public class RatNum
 
     public static bool operator > (RatNum r1, RatNum r2)
     {
-        return (r1.N / r1.D > r2.N / r2.D);
+        return ((r1.N / r1.D) > (r2.N / r2.D));
     }
     public static bool operator <(RatNum r1, RatNum r2)
     {
