@@ -25,6 +25,18 @@ public class RatNum
         this._D = d;
     }
 
+    /// <summary>
+    /// Переаод дроби в десятичный вид
+    /// </summary>
+    /// <param name="N">числитель</param>
+    /// <param name="D">знаменатель</param>
+    /// <returns></returns>
+    private double FractToDeg(int N, int D)
+    {
+        return (double)(N/D);
+    }
+
+
 
 
 }
