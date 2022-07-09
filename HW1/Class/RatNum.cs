@@ -60,5 +60,16 @@ public class RatNum
 
 
 
+    public static RatNum operator + (RatNum r1 , RatNum r2)
+    {
+        return new RatNum((r1.N * r2.D)+ (r2.N * r1.D), r1.D * r2.D);
+    }
+    public static RatNum operator - (RatNum r1, RatNum r2)
+    {
+        return new RatNum((r1.N * r2.D) - (r2.N * r1.D), r1.D * r2.D);
+    }
+
+
+
 
 }
