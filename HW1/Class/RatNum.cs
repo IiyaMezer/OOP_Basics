@@ -21,6 +21,9 @@ public class RatNum
 
     public RatNum (int n, int d)
     {
+        if (d == 0)
+            throw new ArgumentException("Знаменатель не должен быть равен 0."); // мы же пока в высшую математику не лезем.
+
         this._N = n;
         this._D = d;
     }
@@ -31,18 +34,28 @@ public class RatNum
     /// <param name="N">числитель</param>
     /// <param name="D">знаменатель</param>
     /// <returns></returns>
-    private double FractToDeg(int N, int D)
+    private static double FractToDeg(RatNum X)
     {
-        return (double)(N/D);
+        return (double)(X.N/X.D);
     }
 
+    //Скорее всего это варварские методы, это я про промежуточный перевод в десятичную дробь, но я так вижу.
     public static bool operator == (RatNum r1, RatNum r2)
     {
-        return (r1.N == r2.N && r1.D == r2.D);
+        return (RatNum.FractToDeg(r1) == RatNum.FractToDeg(r2));
     }
     public static bool operator !=(RatNum r1, RatNum r2)
     {
-        return (r1.N != r2.N || r1.D != r2.D);
+        return (RatNum.FractToDeg(r1) != RatNum.FractToDeg(r2));
+    }
+
+    public static bool operator > (RatNum r1, RatNum r2)
+    {
+        return (RatNum.FractToDeg(r1) > RatNum.FractToDeg(r2));
+    }
+    public static bool operator <(RatNum r1, RatNum r2)
+    {
+        return (RatNum.FractToDeg(r1) < RatNum.FractToDeg(r2));
     }
 
 
