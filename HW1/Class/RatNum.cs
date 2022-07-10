@@ -30,48 +30,65 @@ public class RatNum
 
     //Булевы
     //Скорее всего это варварские методы, это я про промежуточный перевод в десятичную дробь, но я так вижу.
-    public static bool Equals(RatNum r1, RatNum r2)
+    public  bool Equals(RatNum r1)
     {
-        return ((float)r1.N / r1.D == (float)r2.N / r2.D);
+        if (r1.D == D)
+            return (r1.N == N);
+        return (r1.N * D == N * r1.D); ;
     }
-    public bool Equals(RatNum r)
+
+    public override int GetHashCode()
     {
-        return ((float)N / D == (float)r.N / r.D);
+        return N.GetHashCode() * D.GetHashCode();
     }
 
 
     public static bool operator == (RatNum r1, RatNum r2)
     {
-        return  ((float)r1.N/r1.D == (float)r2.N / r2.D);
+        return r1.Equals(r2);
     }
 
     public static bool operator !=(RatNum r1, RatNum r2)
     {
-        return (r1.N / r1.D != r2.N / r2.D);
+        return ! r1.Equals(r2);
     }
 
     public static bool operator > (RatNum r1, RatNum r2)
     {
-        return ((float)(r1.N / r1.D) > (float)(r2.N / r2.D));
+        if (r1.D == r2.D)
+            return(r1.N > r2.N);
+        return (r1.N * r2.D > r2.N*r1.D); //сравнение через приведение к общему знаменателю
     }
     public static bool operator <(RatNum r1, RatNum r2)
     {
-        return (r1.N / r1.D < r2.N / r2.D);
+        if (r1.D == r2.D)
+            return (r1.N < r2.N);
+        return (r1.N * r2.D < r2.N * r1.D); //сравнение через приведение к общему знаменателю
     }
     public static bool operator <= (RatNum r1, RatNum r2)
     {
-        return (r1.N / r1.D <= r2.N / r2.D);
+        if (r1.D == r2.D)
+            return (r1.N <= r2.N);
+        return (r1.N * r2.D <= r2.N * r1.D); //сравнение через приведение к общему знаменателю
     }
     public static bool operator >=(RatNum r1, RatNum r2)
     {
-        return (r1.N / r1.D >= r2.N / r2.D);
+        if (r1.D == r2.D)
+            return (r1.N >= r2.N);
+        return (r1.N * r2.D >= r2.N * r1.D); //сравнение через приведение к общему знаменателю
     }
 
 
     //Арифметика
     public static RatNum operator + (RatNum r1 , RatNum r2)
     {
-        return new RatNum((r1.N * r2.D)+ (r2.N * r1.D), r1.D * r2.D);
+        if (r1 == 0) { return r2; }
+        if (r2 == 0) { return r1; }
+        if (r1.D == r2.D)
+        {
+            return new RatNum(r1.N + r2.N, r1.D);
+        }
+       return new RatNum((r1.N * r2.D)+ (r2.N * r1.D), r1.D * r2.D);
     }
     public static RatNum operator - (RatNum r1, RatNum r2)
     {
@@ -104,11 +121,18 @@ public class RatNum
         return (float) n.N / n.D;
     }
 
-
     public static implicit operator int(RatNum n)
     {
         return n.N / n.D;
     }
+
+
+    //не до конца понял, для чего нужно переоределять этот оператор, если деление дробей - это, по сути, их умножение с переворотом дроби после "/",  где в этом случае искать остаток?
+    //или я чего-то не понял
+    //public static ratnum operator %(ratnum r)
+    //{
+    //   return ;
+    //}
 
 
 
