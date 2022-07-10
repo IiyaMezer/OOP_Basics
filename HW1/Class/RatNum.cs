@@ -82,8 +82,7 @@ public class RatNum
     //Арифметика
     public static RatNum operator + (RatNum r1 , RatNum r2)
     {
-        if (r1 == 0) { return r2; }
-        if (r2 == 0) { return r1; }
+        
         if (r1.D == r2.D)
         {
             return new RatNum(r1.N + r2.N, r1.D);
@@ -92,7 +91,6 @@ public class RatNum
     }
     public static RatNum operator - (RatNum r1, RatNum r2)
     {
-        if (r2 == 0) { return r1; }
         if (r1.D == r2.D)
         {
             return new RatNum(r1.N - r2.N, r1.D);
@@ -103,7 +101,7 @@ public class RatNum
     {
         if (r1.D == r2.D)
             return new RatNum(r1.N * r2.N, r1.D);
-        return new RatNum(r1.N * r2.N, r1.D + r2.D);
+        return new RatNum(r1.N * r2.N, r1.D * r2.D);
     }
     public static RatNum operator / (RatNum r1, RatNum r2)
     {
