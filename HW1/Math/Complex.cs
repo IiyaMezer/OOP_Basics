@@ -22,8 +22,17 @@ public class Complex
         this._Im = Im;
     }
 
+    public static Complex operator +(Complex C1, Complex C2)
+    {
+        return new Complex(C1.Re + C2.Re, C1.Im + C2.Im);
+    }
+    public static Complex operator -(Complex C1, Complex C2)
+    {
+        return new Complex(C1.Re - C2.Re, C1.Im - C2.Im);
+    }
+
     public override string ToString()
     {
-        return Re + "+" +"i"+ Im;
+        return Re + "+" + Im + "i";
     }
 }
