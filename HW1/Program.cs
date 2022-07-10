@@ -1,9 +1,9 @@
-﻿using HW_5.Class;
+﻿using HW_5.Math;
 
-RatNum n1 = new(2, 8);
-RatNum n2 = new(3, 8);
-RatNum n3 = new(2, 8);
-RatNum n4 = new(2, 7);
+Fractions n1 = new(2, 8);
+Fractions n2 = new(3, 8);
+Fractions n3 = new(2, 8);
+Fractions n4 = new(2, 7);
 
 Console.WriteLine();
 
