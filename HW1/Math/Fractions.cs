@@ -30,7 +30,7 @@ public class Fractions
 
     //Булевы
     //Скорее всего это варварские методы, это я про промежуточный перевод в десятичную дробь, но я так вижу.
-    public  bool Equals(Fractions r1)
+    public bool Equals(Fractions r1)
     {
         if (r1.D == D)
             return (r1.N == N);
