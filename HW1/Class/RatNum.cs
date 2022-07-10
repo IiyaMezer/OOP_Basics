@@ -110,14 +110,12 @@ public class RatNum
 
     public static RatNum operator ++ (RatNum r)
     {
-        r.D++;
-        r.N++;
+        r.N += r.N;
         return r;
     }
     public static RatNum operator --(RatNum r)
     {
-        r.D--;
-        r.N--;
+        r.N -= r.N;
         return r;
     }
 
