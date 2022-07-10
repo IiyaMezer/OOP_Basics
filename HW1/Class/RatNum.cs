@@ -101,6 +101,8 @@ public class RatNum
     }
     public static RatNum operator * (RatNum r1, RatNum r2)
     {
+        if (r1.D == r2.D)
+            return new RatNum(r1.N * r2.N, r1.D);
         return new RatNum(r1.N * r2.N, r1.D + r2.D);
     }
     public static RatNum operator / (RatNum r1, RatNum r2)
@@ -131,16 +133,12 @@ public class RatNum
         return n.N / n.D;
     }
 
-
     //не до конца понял, для чего нужно переоределять этот оператор, если деление дробей - это, по сути, их умножение с переворотом дроби после "/",  где в этом случае искать остаток?
     //или я чего-то не понял
     //public static ratnum operator %(ratnum r)
     //{
     //   return ;
     //}
-
-
-
 
     public override string ToString()
     {
