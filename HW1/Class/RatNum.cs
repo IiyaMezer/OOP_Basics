@@ -110,12 +110,12 @@ public class RatNum
 
     public static RatNum operator ++ (RatNum r)
     {
-        r.N += r.N;
+        r.N += r.D;
         return r;
     }
     public static RatNum operator --(RatNum r)
     {
-        r.N -= r.N;
+        r.N -= r.D;
         return r;
     }
 
@@ -135,7 +135,6 @@ public class RatNum
     //{
     //   return ;
     //}
-
     public override string ToString()
     {
         return N + "/" + D ;

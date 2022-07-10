@@ -43,8 +43,10 @@ Console.WriteLine($"{n1} div {n4}= {n1 / n4}"); //деление, div чтобы
 Console.WriteLine();
 
 
-Console.WriteLine(n1);
+Console.WriteLine($"{n1}");
 Console.WriteLine("++");
-Console.WriteLine(n1);
+Console.WriteLine($"{n1++}");
+Console.WriteLine("--");
+Console.WriteLine($"{n1--}");
 
 Console.ReadLine();   
