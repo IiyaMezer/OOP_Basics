@@ -4,22 +4,22 @@ namespace HW_5.Class;
 
 public class RatNum
 {
-    private double _N; //числитель
-    private double _D; //знаменатель
+    private int _N; //числитель
+    private int _D; //знаменатель
 
-    public double N
+    public int N
     {
         get => _N;
         set => _N = value;
     }
 
-    public double D
+    public int D
     {
         get => _D;
         set => _D = value;
     }
 
-    public RatNum (double n, double d)
+    public RatNum (int n, int d)
     {
         if (d == 0)
             throw new ArgumentException("Знаменатель не должен быть равен 0."); // мы же пока в высшую математику не лезем.
@@ -28,26 +28,21 @@ public class RatNum
         this._D = d;
     }
 
-    /// <summary>
-    /// Перевод дроби в десятичный вид.
-    /// </summary>
-    /// <param name="N">числитель</param>
-    /// <param name="D">знаменатель</param>
-    /// <returns></returns>
-    private static double FractToDeg(RatNum X)
-    {
-        return (double)(X.N/X.D);
-    }
     //Булевы
     //Скорее всего это варварские методы, это я про промежуточный перевод в десятичную дробь, но я так вижу.
-    public static bool operator == (RatNum r1, RatNum r2)
-    {
-        return (r1.N/r1.D == r2.N / r2.D);
-    }
-
     public static bool Equals(RatNum r1, RatNum r2)
     {
-        return (r1.N / r1.D == r2.N / r2.D);
+        return ((float)r1.N / r1.D == (float)r2.N / r2.D);
+    }
+    public bool Equals(RatNum r)
+    {
+        return ((float)N / D == (float)r.N / r.D);
+    }
+
+
+    public static bool operator == (RatNum r1, RatNum r2)
+    {
+        return  ((float)r1.N/r1.D == (float)r2.N / r2.D);
     }
 
     public static bool operator !=(RatNum r1, RatNum r2)
@@ -57,7 +52,7 @@ public class RatNum
 
     public static bool operator > (RatNum r1, RatNum r2)
     {
-        return ((r1.N / r1.D) > (r2.N / r2.D));
+        return ((float)(r1.N / r1.D) > (float)(r2.N / r2.D));
     }
     public static bool operator <(RatNum r1, RatNum r2)
     {
@@ -103,6 +98,20 @@ public class RatNum
         r.N--;
         return r;
     }
+
+    public static explicit operator float(RatNum n)
+    {
+        return (float) n.N / n.D;
+    }
+
+
+    public static implicit operator int(RatNum n)
+    {
+        return n.N / n.D;
+    }
+
+
+
 
     public override string ToString()
     {
