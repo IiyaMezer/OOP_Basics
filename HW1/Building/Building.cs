@@ -2,7 +2,7 @@
 
 public class Building
 {
-    static int counter = 0;
+    private static int counter = 0;
 
     private int _BulidHeight;
     private int _FloorAmount;
