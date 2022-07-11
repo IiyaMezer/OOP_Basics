@@ -33,6 +33,6 @@ public class Complex
 
     public override string ToString()
     {
-        return Re + "+" + Im + "i";
+        return $"{Re}+{Im}i";
     }
 }
