@@ -39,7 +39,7 @@ public class Fractions
 
     public override int GetHashCode()
     {
-        return N.GetHashCode() * D.GetHashCode();
+        return HashCode.Combine(N, D);
     }
 
 
