@@ -116,6 +116,11 @@ public class Account
         return ! a.Equals(b);
     }
 
+    public override int GetHashCode()
+    {
+        return HashCode.Combine(ID,Cash,Type);
+    }
+
 
     //todo
     public override string ToString()
