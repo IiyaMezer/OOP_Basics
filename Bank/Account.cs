@@ -41,6 +41,13 @@ public class Account
     /// <param name="amount">количество средств</param>
     public void Transfer(Account source, decimal amount)
     {
+        decimal lessZeroCheck = Cash - amount;
+
+        if (lessZeroCheck < 0)
+        {
+            throw new ArgumentException("Недостаточно средств.");
+        }
+
         source.Cash = source.Cash - amount;
         Cash += amount;
     }
@@ -69,7 +76,15 @@ public class Account
     /// <param name="money">сумма</param>
     public void CashOut (decimal money)
     {
+        decimal lessZeroCheck = Cash - money;
+        if (lessZeroCheck < 0)
+        {
+            throw new ArgumentException("Недостаточно средств.");
+        }
+            
+        
         Cash -= money;
+
     }
 
     /// <summary>
@@ -80,6 +95,33 @@ public class Account
     {
         Cash += money;       
     }
- 
- }
+
+    /// <summary>
+    /// Сравнение только типов, ибо идентификатор у счетов не может быть одинаков, а сравнивать кол-во средств не вижу смысла
+    /// </summary>
+    /// <param name="obj"></param>
+    /// <returns></returns>
+    public bool Equals (Account obj)
+    {
+        return (obj.Type == this.Type);             
+    }
+
+    public static bool operator ==(Account a, Account b)
+    {
+        return a.Equals(b);
+    }
+
+    public static bool operator !=(Account a, Account b)
+    {
+        return ! a.Equals(b);
+    }
+
+
+    //todo
+    public override string ToString()
+    {
+        return base.ToString();
+    }
+    
+}
 
