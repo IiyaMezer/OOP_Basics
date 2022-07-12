@@ -50,7 +50,8 @@ public class Complex
     }
 
     public override string ToString()
-    {
+    { if (Im <0)
+            return $"{Re}{Im}i";
         return $"{Re}+{Im}i";
     }
 }
