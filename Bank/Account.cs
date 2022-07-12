@@ -57,7 +57,7 @@ public class Account
     /// </summary>
     private static int IdGen()
     {
-       return Counter++;        
+       return ++Counter;        
     }
 
     /// <summary>
@@ -125,7 +125,7 @@ public class Account
     //todo
     public override string ToString()
     {
-        return base.ToString();
+        return $" Аккаунт: {ID:d4}\n Тип:{Type}\n Баланс:{Cash} руб.";
     }
     
 }
