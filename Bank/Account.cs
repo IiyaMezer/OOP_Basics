@@ -1,16 +1,14 @@
 ﻿
-namespace OOP_Basics.Account;
+namespace Bank;
  internal class Account
  {
-    static int id = 0; //переменная для генератора ID
+    static int Counter = 0; //переменная для генератора ID
 
     private int _Id; 
     private decimal _Cash;
     private TypeEnum _Type;
-
-    public static int Id => id;
-    
-    int ID
+     
+    public int ID
     {
         get => _Id;
     }
@@ -41,10 +39,9 @@ namespace OOP_Basics.Account;
     /// <summary>
     /// Генератор ID
     /// </summary>
-    private void IdGen()
+    private static int IdGen()
     {
-        id++;
-        _Id = id;
+       return Counter++;        
     }
 
     /// <summary>
@@ -54,7 +51,7 @@ namespace OOP_Basics.Account;
     {
         this._Type = type;
         this._Cash = cash;
-        IdGen();
+        this._Id = IdGen();
     }
 
     /// <summary>
@@ -74,16 +71,6 @@ namespace OOP_Basics.Account;
     {
         Cash += money;       
     }
-
-   /// <summary>
-   /// Вывод информации о счете
-   /// </summary>
-    public void Writeinfo()
-    {
-        Console.WriteLine($"Номер счета: {ID:d8};");
-        Console.WriteLine($"Баланс {Cash} руб. ;");
-        Console.WriteLine($"Тип {Type};");
-        Console.WriteLine("");
-    }
+ 
  }
 
