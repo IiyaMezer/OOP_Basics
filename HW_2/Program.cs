@@ -1,23 +1,11 @@
 ﻿using Bank;
 
 
-static string StringReverse(string source)
-{
-    char[] chars = source.ToCharArray();
-    string reverse = "";
-    // Не самый лучший способ, но зато поработал с массивом
-    for (int i = chars.Length - 1; i > -1; i--)
-    {
-        reverse += chars[i];
-    }
+Account Acc1 = new(10M, TypeEnum.VIP);
+Account Acc2 = new(10M, TypeEnum.Normal);
+Account Acc3 = new(10M, TypeEnum.Corp);
+Account Acc4 = new(10M, TypeEnum.Comp);
 
-    return reverse;
-}
-
- Account Acc1 = new(10M, TypeEnum.VIP);
- Account Acc2 = new(10M, TypeEnum.Normal);
- Account Acc3 = new(10M, TypeEnum.Corp);
- Account Acc4 = new(10M, TypeEnum.Comp);
 
 
 Console.WriteLine("========================");
@@ -42,15 +30,12 @@ Console.WriteLine(Acc1.Cash);//проверка баланса
 
 Console.WriteLine("========================");
 
-Acc1.Writeinfo();
-Acc2.Writeinfo();
-Acc3.Writeinfo();
-Acc4.Writeinfo();
-Console.WriteLine("========================");
-Console.WriteLine("Задание №2");
-Console.WriteLine("========================");
+Info.Write(Acc1);
+Info.Write(Acc2);
+Info.Write(Acc3);
+Info.Write(Acc4);
 
-Console.WriteLine(StringReverse("АТМТА")) ;
+Console.ReadLine();
 
 
 

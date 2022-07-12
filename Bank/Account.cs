@@ -1,6 +1,15 @@
 ﻿
 namespace Bank;
- internal class Account
+
+public enum TypeEnum
+{
+    VIP = 1, //особые условие
+    Normal = 2, //обычные условия
+    Corp = 3, //корпоративные условия(зарплатная карта)
+    Comp = 4, //счет компании
+}
+
+public class Account
  {
     static int Counter = 0; //переменная для генератора ID
 
@@ -49,9 +58,9 @@ namespace Bank;
     /// </summary>
     public Account(decimal cash, TypeEnum type)
     {
-        this._Type = type;
-        this._Cash = cash;
-        this._Id = IdGen();
+        _Type = type;
+        _Cash = cash;
+        _Id = IdGen();
     }
 
     /// <summary>
