@@ -1,4 +1,4 @@
-﻿namespace HW_5.Math;
+﻿namespace Math;
 
 public class Complex
 {

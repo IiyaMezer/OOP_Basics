@@ -1,4 +1,4 @@
-﻿using HW_5.Math;
+﻿using Math;
 
 Fractions n1 = new(2, 8);
 Fractions n2 = new(3, 8);
