@@ -37,18 +37,18 @@ public class Fractions
 
     public override int GetHashCode()
     {
-        return N.GetHashCode() * D.GetHashCode();
+        return HashCode.Combine(N, D);
     }
 
 
     public static bool operator == (Fractions r1, Fractions r2)
     {
-        return r1.Equals(r2);
+        return Equals(r1, r2);
     }
 
     public static bool operator !=(Fractions r1, Fractions r2)
     {
-        return ! r1.Equals(r2);
+        return !(r1 ==r2);
     }
 
     public static bool operator > (Fractions r1, Fractions r2)
