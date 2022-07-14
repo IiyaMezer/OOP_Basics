@@ -1,23 +1,35 @@
 ﻿
 namespace Geometry
 {
-    public class Figure
+    public class Figure 
     {
         private int _Color; //пока так
 
+        /// <summary>
+        /// Bool так как у нас 2 состояния, видимый или нет. В дальнейшем нужно будет добавить параметр прозрачности.
+        /// Так как во многих "рисовалках" если функция как настройки прозрачности, так и переключения видимости. 
+        /// </summary>
         private bool _Invisibility;
 
-        private float _X;
-
-        private float _Y;
-
-        public float MoveX(float x)
+        public int Color
         {
-            return _X += x;
+            get => _Color;
+            set => _Color = value;
         }
-        public float MoveY(float y)
+
+        public bool Invise
         {
-            return _Y += y;
+            get => _Invisibility;
+            set => _Invisibility = value;
+        }
+        
+        public double MoveX(double dx)
+        {
+            return X += dx;
+        }
+        public double MoveY(double dy)
+        {
+            return Y += dy;
         }
     }
 }
