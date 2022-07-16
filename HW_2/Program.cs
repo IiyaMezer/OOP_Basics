@@ -2,7 +2,7 @@
 using Cipher;
 
 
-string sampletext = "a ривет мир";
+string sampletext = "привет мир!";
 
 ACoder sample = new ACoder(sampletext);
 StringBuilder encoded = new StringBuilder();

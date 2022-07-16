@@ -32,32 +32,36 @@ public class ACoder : ICoder
 
         for (int i = 0; i < toencode.Length; i++)
         {
-            for (int j = 0; j < _A.Length; j++)
+            if (!Char.IsLetter(toencode[i]))
+                result.Append(toencode[i]);
+            else
             {
-                if (toencode[i] == _A[j])
+                for (int j = 0; j < _A.Length; j++)
                 {
-                    index = j;
-                    break;
+                    if (toencode[i] == _A[j])
+                    {
+                        index = j;
+                        break;
+                    }
+
                 }
-                    
+                d = index + 1;
+
+                if (d > 32)
+                {
+                    d -= 33;
+                }
+                toencode[i] = _A[d];
+                result.Append(toencode[i]);
             }
-            d = index + 1; 
-
-            if (d > 32)
-            {
-                d -= 33;
-            }
-
-            toencode[i] = _A[d]; // Меняем букву
-
-            result.Append(toencode[i]);
+            
         }
 
         return result ;
     }
 
 
-    // к работе
+    
     public StringBuilder Decode(string text)
     {
         var result = new StringBuilder();
