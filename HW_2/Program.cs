@@ -2,7 +2,7 @@
 using Cipher;
 
 
-string sampletext = "привет мир!";
+string sampletext = "Привет Мир!";
 
 ACoder samplecode = new ACoder(sampletext);
 

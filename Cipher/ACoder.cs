@@ -33,31 +33,53 @@ public class ACoder : ICoder
 
         for (int i = 0; i < toencode.Length; i++)
         {
+            //буква или нет
             if (!Char.IsLetter(toencode[i]))
                 result.Append(toencode[i]);
             else
             {
-                for (int j = 0; j < _A.Length; j++)
+                //заглавная или нет
+                if (!Char.IsLower(toencode[i]))
                 {
-                    if (toencode[i] == _A[j])
+                    for (int j = 0; j < _AUP.Length; j++)
                     {
-                        index = j;
-                        break;
+                        if (toencode[i] == _AUP[j])
+                        {
+                            index = j;
+                            break;
+                        }
                     }
+                    d = index + 1;
 
+                    if (d > 32)
+                    {
+                        d -= 33;
+                    }
+                    toencode[i] = _AUP[d];
                 }
-                d = index + 1;
 
-                if (d > 32)
+                else
                 {
-                    d -= 33;
+                    for (int j = 0; j < _A.Length; j++)
+                    {
+                        if (toencode[i] == _A[j])
+                        {
+                            index = j;
+                            break;
+                        }
+                    }
+                    d = index + 1;
+
+                    if (d > 32)
+                    {
+                        d -= 33;
+                    }
+                    toencode[i] = _A[d];
                 }
-                toencode[i] = _A[d];
+
                 result.Append(toencode[i]);
             }
-            
         }
-
         return result ;
     }
 
@@ -72,38 +94,61 @@ public class ACoder : ICoder
 
         for (int i = 0; i < toencode.Length; i++)
         {
-            if (!Char.IsLetter(toencode[i])) 
+            //буква или нет
+            if (!Char.IsLetter(toencode[i]))
                 result.Append(toencode[i]);
             else
             {
-                for (int j = 0; j < _A.Length; j++)
+                //заглавная или нет
+                if (!Char.IsLower(toencode[i]))
                 {
-                    if (toencode[i] == _A[j])
+                    for (int j = 0; j < _AUP.Length; j++)
                     {
-                        index = j;
-                        break;
+                        if (toencode[i] == _AUP[j])
+                        {
+                            index = j;
+                            break;
+                        }
                     }
+                    d = index - 1;
 
+                    if (d > 32)
+                    {
+                        d -= 33;
+                    }
+                    toencode[i] = _AUP[d];
                 }
-                d = index - 1;
 
-                if (d > 32)
+                else
                 {
-                    d -= 33;
+                    for (int j = 0; j < _A.Length; j++)
+                    {
+                        if (toencode[i] == _A[j])
+                        {
+                            index = j;
+                            break;
+                        }
+                    }
+                    d = index - 1;
+
+                    if (d > 32)
+                    {
+                        d -= 33;
+                    }
+                    toencode[i] = _A[d];
                 }
-                toencode[i] = _A[d];
+
                 result.Append(toencode[i]);
             }
-
         }
-
         return result;
     }
-
-
-
-
 }
+
+
+
+
+
 
 
 
