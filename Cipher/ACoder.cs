@@ -8,9 +8,13 @@ public class ACoder : ICoder
     private string _Text;
 
     /// <summary>
-    /// Алфавит 
+    /// Алфавит нижнего регистра
     /// </summary>
+   
     private static readonly char[] _A = { 'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я'};
+    /// <summary>
+    /// алфавит верхнего регистра
+    /// </summary>
     private static readonly char[] _AUP = {'A', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я' };
 
     public string Text
@@ -41,7 +45,7 @@ public class ACoder : ICoder
                 //заглавная или нет
                 if (!Char.IsLower(toencode[i]))
                 {
-                    for (int j = 0; j < _AUP.Length; j++)
+                    for (int j = 0; j < _AUP.Length; j++)//для верхнего регистра
                     {
                         if (toencode[i] == _AUP[j])
                         {
@@ -51,7 +55,7 @@ public class ACoder : ICoder
                     }
                     d = index + 1;
 
-                    if (d > 32)
+                    if (d > 32) //для "Закольцовки" шифрования: э>>а
                     {
                         d -= 33;
                     }
@@ -60,7 +64,7 @@ public class ACoder : ICoder
 
                 else
                 {
-                    for (int j = 0; j < _A.Length; j++)
+                    for (int j = 0; j < _A.Length; j++)//для нижнего регистра
                     {
                         if (toencode[i] == _A[j])
                         {
@@ -70,7 +74,7 @@ public class ACoder : ICoder
                     }
                     d = index + 1;
 
-                    if (d > 32)
+                    if (d > 32) 
                     {
                         d -= 33;
                     }
