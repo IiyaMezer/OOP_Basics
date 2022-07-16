@@ -32,9 +32,6 @@ public class ACoder : ICoder
 
         for (int i = 0; i < toencode.Length; i++)
         {
-
-            
-            // Ищем индекс буквы
             for (int j = 0; j < _A.Length; j++)
             {
                 if (toencode[i] == _A[j])
@@ -44,9 +41,8 @@ public class ACoder : ICoder
                 }
                     
             }
-            d = index + 1; // Делаем смещение
+            d = index + 1; 
 
-            // Проверяем, чтобы не вышли за пределы алфавита
             if (d > 32)
             {
                 d -= 33;
@@ -54,18 +50,14 @@ public class ACoder : ICoder
 
             toencode[i] = _A[d]; // Меняем букву
 
- 
-
-            // Проверяем, чтобы не вышли за пределы алфавита
-         
-        
-
             result.Append(toencode[i]);
         }
 
         return result ;
     }
 
+
+    // к работе
     public StringBuilder Decode(string text)
     {
         var result = new StringBuilder();
