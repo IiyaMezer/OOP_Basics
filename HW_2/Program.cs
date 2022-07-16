@@ -4,19 +4,16 @@ using Cipher;
 
 string sampletext = "Привет Мир!";
 
-ACoder samplecode = new ACoder(sampletext);
+BCoder samplecode = new BCoder(sampletext);
 
 StringBuilder encoded = new StringBuilder();
 StringBuilder decoded = new StringBuilder();
 
 
-
-
-
 encoded = samplecode.Encode();
 
 string sampledecode1 = encoded.ToString();
-ACoder sampledecode = new ACoder(sampledecode1);
+BCoder sampledecode = new BCoder(sampledecode1);
 
 
 Console.WriteLine(encoded.ToString());
