@@ -112,7 +112,7 @@ public class BCoder: ICoder
                             break;
                         }
                     }
-                    d = index - 1;
+                    d = 32 - index;
 
                     if (d > 32)
                     {
@@ -131,7 +131,7 @@ public class BCoder: ICoder
                             break;
                         }
                     }
-                    d = index - 1;
+                    d = 32 - index;
 
                     if (d > 32)
                     {
