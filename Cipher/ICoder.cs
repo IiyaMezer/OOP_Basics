@@ -7,7 +7,7 @@ public interface ICoder
 
     StringBuilder Encode();
 
-    StringBuilder Decode(string todecode);
+    StringBuilder Decode();
 
 }
 
