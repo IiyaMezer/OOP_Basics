@@ -5,9 +5,9 @@ namespace Cipher;
 public interface ICoder
 {
 
-    StringBuilder Encode(StringBuilder toencode);
+    StringBuilder Encode();
 
-    StringBuilder Decode(StringBuilder todecode);
+    StringBuilder Decode(string todecode);
 
 }
 

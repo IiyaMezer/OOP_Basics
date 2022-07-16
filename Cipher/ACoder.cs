@@ -10,22 +10,30 @@ public class ACoder : ICoder
     /// <summary>
     /// Алфавит 
     /// </summary>
-    private char[] _A = { 'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я' };
+    private static readonly char[] _A = { 'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я' };
 
     public string Text
     {
         get => _Text;
+        set => _Text = value;
+    }
+
+    public ACoder (string text)
+    {
+        _Text = text;
     }
     
-    public StringBuilder Encode(string text)
+    public StringBuilder Encode()
     {
         int d;
         int index = 0;
         var result = new StringBuilder();
-        char[] toencode = text.ToCharArray();
+        char[] toencode = _Text.ToCharArray();
 
         for (int i = 0; i < toencode.Length; i++)
         {
+
+            
             // Ищем индекс буквы
             for (int j = 0; j < _A.Length; j++)
             {
@@ -34,17 +42,22 @@ public class ACoder : ICoder
                     index = j;
                     break;
                 }
+                    
             }
-
             d = index + 1; // Делаем смещение
 
-           // Проверяем, чтобы не вышли за пределы алфавита
+            // Проверяем, чтобы не вышли за пределы алфавита
             if (d > 32)
             {
                 d -= 33;
             }
 
-                toencode[i] = _A[d]; // Меняем букву
+            toencode[i] = _A[d]; // Меняем букву
+
+ 
+
+            // Проверяем, чтобы не вышли за пределы алфавита
+         
         
 
             result.Append(toencode[i]);
@@ -53,7 +66,7 @@ public class ACoder : ICoder
         return result ;
     }
 
-    public StringBuilder Decode(StringBuilder text)
+    public StringBuilder Decode(string text)
     {
         var result = new StringBuilder();
 

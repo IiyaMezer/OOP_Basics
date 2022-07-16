@@ -1,15 +1,15 @@
-﻿using Bank;
+﻿using System.Text;
+using Cipher;
 
 
-Account Acc1 = new(10600000M, TypeEnum.VIP);
-Account Acc2 = new(5000000M, TypeEnum.Normal);
-Account Acc3 = new(10M, TypeEnum.Comp);
-Account Acc4 = new(10M, TypeEnum.Comp);
-Console.WriteLine(Acc1);
-Console.WriteLine();
-Console.WriteLine(Acc2);
+string sampletext = "a ривет мир";
 
-Console.WriteLine(Acc4 == Acc3);
+ACoder sample = new ACoder(sampletext);
+StringBuilder encoded = new StringBuilder();
+
+encoded = sample.Encode();
+
+Console.WriteLine(encoded.ToString());
 
 
 
