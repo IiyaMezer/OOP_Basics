@@ -5,11 +5,9 @@ VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP_Basics", "HW_2\OOP_Basics.csproj", "{FF634E79-1E7D-4F34-898D-FDC15167E928}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bank", "Bank\Bank.csproj", "{17554ABA-9811-436E-9583-3B1E2B3EFA7A}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geometry", "Geometry\Geometry.csproj", "{F856D894-8445-422C-9C53-D6EEBBE2CCAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cipher", "Cipher\Cipher.csproj", "{562133C4-9254-486F-BB5A-18155F66A5FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cipher", "Cipher\Cipher.csproj", "{562133C4-9254-486F-BB5A-18155F66A5FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +19,6 @@ Global
 		{FF634E79-1E7D-4F34-898D-FDC15167E928}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF634E79-1E7D-4F34-898D-FDC15167E928}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF634E79-1E7D-4F34-898D-FDC15167E928}.Release|Any CPU.Build.0 = Release|Any CPU
-		{17554ABA-9811-436E-9583-3B1E2B3EFA7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{17554ABA-9811-436E-9583-3B1E2B3EFA7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{17554ABA-9811-436E-9583-3B1E2B3EFA7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{17554ABA-9811-436E-9583-3B1E2B3EFA7A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F856D894-8445-422C-9C53-D6EEBBE2CCAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F856D894-8445-422C-9C53-D6EEBBE2CCAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F856D894-8445-422C-9C53-D6EEBBE2CCAC}.Release|Any CPU.ActiveCfg = Release|Any CPU

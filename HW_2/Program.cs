@@ -22,12 +22,6 @@ Console.WriteLine(encoded.ToString());
 decoded = sampledecode.Decode();
 Console.WriteLine(decoded.ToString());
 
-
-
-
-
-
-
 Console.ReadLine();
 
 
