@@ -37,13 +37,11 @@ public class ACoder : ICoder
 
         for (int i = 0; i < toencode.Length; i++)
         {
-            //буква или нет
-            if (!Char.IsLetter(toencode[i]))
+            if (!Char.IsLetter(toencode[i]))            //буква или нет
                 result.Append(toencode[i]);
             else
             {
-                //заглавная или нет
-                if (!Char.IsLower(toencode[i]))
+                if (!Char.IsLower(toencode[i]))                //заглавная или нет
                 {
                     for (int j = 0; j < _AUP.Length; j++)//для верхнего регистра
                     {
@@ -96,13 +94,12 @@ public class ACoder : ICoder
 
         for (int i = 0; i < toencode.Length; i++)
         {
-            //буква или нет
-            if (!Char.IsLetter(toencode[i]))
+            if (!Char.IsLetter(toencode[i]))//буква или нет
                 result.Append(toencode[i]);
             else
             {
-                //заглавная или нет
-                if (!Char.IsLower(toencode[i]))
+                
+                if (!Char.IsLower(toencode[i]))//заглавная или нет
                 {
                     for (int j = 0; j < _AUP.Length; j++)
                     {
