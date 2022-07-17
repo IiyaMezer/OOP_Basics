@@ -5,8 +5,8 @@ using Cipher;
 StringBuilder encoded = new StringBuilder();
 StringBuilder decoded = new StringBuilder();
 
-string sampletext = "А я Привет Мир я Мир !";
-
+string sampletext =
+    "Имеется спорная точка зрения, гласящая примерно следующее: сделанные на базе интернет-аналитики выводы призывают нас к новым свершениям, которые, в свою очередь, должны быть в равной степени предоставлены сами себе.";
 ACoder samplecode = new ACoder(sampletext);
 
 encoded = samplecode.Encode();
