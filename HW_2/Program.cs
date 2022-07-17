@@ -5,7 +5,7 @@ using Cipher;
 StringBuilder encoded = new StringBuilder();
 StringBuilder decoded = new StringBuilder();
 
-string sampletext = "Привет Мир!";
+string sampletext = "А я Привет Мир я Мир !";
 
 ACoder samplecode = new ACoder(sampletext);
 

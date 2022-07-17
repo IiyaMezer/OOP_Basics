@@ -56,9 +56,8 @@ public class ACoder : ICoder
                     d = index + 1;
 
                     if (d > _A.Length-1) //для "Закольцовки" шифрования: э>>а
-                    {
                         d -= _A.Length;
-                    }
+                    
                     toencode[i] = _AUP[d];
                 }
 
@@ -74,10 +73,9 @@ public class ACoder : ICoder
                     }
                     d = index + 1;
 
-                    if (d > _A.Length-1) 
-                    {
+                    if (d > _A.Length-1)
                         d -= _A.Length;
-                    }
+                   
                     toencode[i] = _A[d];
                 }
 
@@ -116,10 +114,9 @@ public class ACoder : ICoder
                     }
                     d = index - 1;
 
-                    if (d > _A.Length-1)
-                    {
-                        d -= _A.Length;
-                    }
+                    if (d < 0)//если нужно перейти из "а" в "я" или дальше, в зависимости от ключа
+                        d += _A.Length;
+
                     toencode[i] = _AUP[d];
                 }
 
@@ -134,11 +131,10 @@ public class ACoder : ICoder
                         }
                     }
                     d = index - 1;
+                    
+                   if( d < 0) //если нужно перейти из "а" в "я" или дальше, в зависимости от ключа
+                        d += _A.Length;
 
-                    if (d > _A.Length - 1)
-                    {
-                        d -= _A.Length;
-                    }
                     toencode[i] = _A[d];
                 }
 
