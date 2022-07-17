@@ -51,12 +51,8 @@ public class BCoder: ICoder
                             break;
                         }
                     }
-                    d = 32 - index;
-
-                    if (d > 32) //для "Закольцовки" шифрования: э>>а
-                    {
-                        d -= 33;
-                    }
+                    d = _A.Length - index;
+                    
                     toencode[i] = _AUP[d];
                 }
 
@@ -70,12 +66,8 @@ public class BCoder: ICoder
                             break;
                         }
                     }
-                    d = 32 - index;
+                    d = _A.Length - index;
 
-                    if (d > 32)
-                    {
-                        d -= 33;
-                    }
                     toencode[i] = _A[d];
                 }
 
@@ -112,12 +104,9 @@ public class BCoder: ICoder
                             break;
                         }
                     }
-                    d = 32 - index;
+                    d = _A.Length - index;
 
-                    if (d > 32)
-                    {
-                        d -= 33;
-                    }
+                    
                     toencode[i] = _AUP[d];
                 }
 
@@ -131,12 +120,8 @@ public class BCoder: ICoder
                             break;
                         }
                     }
-                    d = 32 - index;
-
-                    if (d > 32)
-                    {
-                        d -= 33;
-                    }
+                    d = _A.Length - index;
+                    
                     toencode[i] = _A[d];
                 }
 

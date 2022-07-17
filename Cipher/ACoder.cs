@@ -55,9 +55,9 @@ public class ACoder : ICoder
                     }
                     d = index + 1;
 
-                    if (d > 32) //для "Закольцовки" шифрования: э>>а
+                    if (d > _A.Length-1) //для "Закольцовки" шифрования: э>>а
                     {
-                        d -= 33;
+                        d -= _A.Length;
                     }
                     toencode[i] = _AUP[d];
                 }
@@ -74,9 +74,9 @@ public class ACoder : ICoder
                     }
                     d = index + 1;
 
-                    if (d > 32) 
+                    if (d > _A.Length-1) 
                     {
-                        d -= 33;
+                        d -= _A.Length;
                     }
                     toencode[i] = _A[d];
                 }
@@ -116,9 +116,9 @@ public class ACoder : ICoder
                     }
                     d = index - 1;
 
-                    if (d > 32)
+                    if (d > _A.Length-1)
                     {
-                        d -= 33;
+                        d -= _A.Length;
                     }
                     toencode[i] = _AUP[d];
                 }
@@ -135,9 +135,9 @@ public class ACoder : ICoder
                     }
                     d = index - 1;
 
-                    if (d > 32)
+                    if (d > _A.Length - 1)
                     {
-                        d -= 33;
+                        d -= _A.Length;
                     }
                     toencode[i] = _A[d];
                 }

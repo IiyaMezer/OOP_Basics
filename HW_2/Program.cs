@@ -7,14 +7,14 @@ StringBuilder decoded = new StringBuilder();
 
 string sampletext = "Привет Мир!";
 
-BCoder samplecode = new BCoder(sampletext);
+ACoder samplecode = new ACoder(sampletext);
 
 encoded = samplecode.Encode();
 
 string sampledecode1 = encoded.ToString();
 
 
-BCoder sampledecode = new BCoder(sampledecode1);
+ACoder sampledecode = new ACoder(sampledecode1);
 
 
 Console.WriteLine(encoded.ToString());
