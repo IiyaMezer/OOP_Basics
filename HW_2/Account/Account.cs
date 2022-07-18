@@ -53,7 +53,7 @@ namespace OOP_Basics.Account;
     {
         this._Type = type;
         this._Cash = cash;
-        IdGen();
+        _Id = dGen();
     }
 
     /// <summary>
