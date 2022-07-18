@@ -41,10 +41,9 @@ namespace OOP_Basics.Account;
     /// <summary>
     /// Генератор ID
     /// </summary>
-    private void IdGen()
+    private static int IdGen()
     {
-        id++;
-        _Id = id;
+        return id++;
     }
 
     /// <summary>
