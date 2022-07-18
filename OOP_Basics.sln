@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW1", "HW1\HW1.csproj", "{583FCE22-364D-4817-9D42-C4195B20D6A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW_5", "HW1\HW_5.csproj", "{583FCE22-364D-4817-9D42-C4195B20D6A5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{178955A5-0BC0-45D1-882E-D7BB5741EF94} = {178955A5-0BC0-45D1-882E-D7BB5741EF94}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math", "Math\Math.csproj", "{178955A5-0BC0-45D1-882E-D7BB5741EF94}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_2", "HW_2\HW_2.csproj", "{FF634E79-1E7D-4F34-898D-FDC15167E928}"
 EndProject
@@ -25,6 +30,10 @@ Global
 		{583FCE22-364D-4817-9D42-C4195B20D6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{583FCE22-364D-4817-9D42-C4195B20D6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{583FCE22-364D-4817-9D42-C4195B20D6A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{178955A5-0BC0-45D1-882E-D7BB5741EF94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{178955A5-0BC0-45D1-882E-D7BB5741EF94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{178955A5-0BC0-45D1-882E-D7BB5741EF94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{178955A5-0BC0-45D1-882E-D7BB5741EF94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
