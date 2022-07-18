@@ -1,29 +1,34 @@
 ﻿using HW_2.Account;
 
-AccountTask1 Acc1 = new();
-Acc1.Id = 111;
-Acc1.Cash = 5000000000000M;
-Acc1.Type = TypeEnum.VIP;
+ Account Acc1 = new(10M, TypeEnum.VIP);
 
-AccountTask1 Acc2 = new();
-Acc2.Id = 222;
-Acc2.Cash = 4521547.22M;
-Acc2.Type = TypeEnum.Normal;
 
-AccountTask1 Acc3 = new();
-Acc3.Id = 333;
-Acc3.Cash = 123.01M;
-Acc3.Type = TypeEnum.Corp;
+Console.WriteLine("========================");
+Acc1.CashIn(50M);//добавляем денег
+Console.WriteLine(Acc1.Cash);//проверка баланса
 
-AccountTask1 Acc4 = new();
-Acc4.Id = 444;
-Acc4.Cash = 800265324;
-Acc4.Type = TypeEnum.Comp;
+Acc1.CashOut(70M);//пытаемся снять больше положенного
+Console.WriteLine(Acc1.Cash);//проверка баланса
 
-Acc1.Writeinfo(Acc1.Id, Acc1.Cash, Acc1.Type);
-Acc2.Writeinfo(Acc2.Id, Acc2.Cash, Acc2.Type);
-Acc3.Writeinfo(Acc3.Id, Acc3.Cash, Acc3.Type);
-Acc4.Writeinfo(Acc4.Id, Acc4.Cash, Acc4.Type);
+Acc1.CashOut(60M);//пытаемся снять в ноль
+Console.WriteLine(Acc1.Cash);//проверка баланса
+
+Acc1.CashIn(60M);//добавляем денег
+Console.WriteLine(Acc1.Cash);//проверка баланса
+
+Acc1.CashOut(30M);//пытаемся снять в пределах допустимого
+Console.WriteLine(Acc1.Cash);//проверка баланса
+Console.WriteLine("========================");
+
+Account Acc2 = new(4566874351.55M, TypeEnum.Normal);
+Account Acc3 = new(123547896546M, TypeEnum.Corp);
+Account Acc4 = new(4555555555555555, TypeEnum.Comp);
+
+Acc1.Writeinfo();
+Acc2.Writeinfo();
+Acc3.Writeinfo();
+Acc4.Writeinfo();
+
 
 
 
