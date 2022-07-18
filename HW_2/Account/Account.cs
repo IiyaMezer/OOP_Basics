@@ -1,5 +1,5 @@
 ﻿
-namespace HW_2.Account;
+namespace OOP_Basics.Account;
  internal class Account
  {
     static int id = 0; //переменная для генератора ID
@@ -9,25 +9,7 @@ namespace HW_2.Account;
     private TypeEnum _Type;
 
     public static int Id => id;
-
-    void IdGen()
-    {
-        id++;
-        _Id = id;
-    }
     
-    /// <summary>
-    /// конструктор
-    /// </summary>
-    public Account(decimal cash, TypeEnum type)
-    {
-        this._Type = type;
-        this._Cash = cash;
-
-       IdGen();       
-
-    }
-
     int ID
     {
         get => _Id;
@@ -45,24 +27,56 @@ namespace HW_2.Account;
         set => _Type = value;
     }
 
+    /// <summary>
+    /// перевод средств
+    /// </summary>
+    /// <param name="source">источник средств</param>
+    /// <param name="amount">количество средств</param>
+    public void Transfer(Account source, decimal amount)
+    {
+        source.Cash = source.Cash - amount;
+        Cash += amount;
+    }
+
+    /// <summary>
+    /// Генератор ID
+    /// </summary>
+    private static int IdGen()
+    {
+        return id++;
+    }
+
+    /// <summary>
+    /// конструктор
+    /// </summary>
+    public Account(decimal cash, TypeEnum type)
+    {
+        this._Type = type;
+        this._Cash = cash;
+        _Id = dGen();
+    }
+
+    /// <summary>
+    /// Снять стредства
+    /// </summary>
+    /// <param name="money">сумма</param>
     public void CashOut (decimal money)
     {
-        if (Cash < money)
-        {
-            Console.WriteLine("Not enough money");
-        }
-        else
-        {
-          Cash -= money;
-        }
-            
+        Cash -= money;
     }
+
+    /// <summary>
+    /// Зачислить средства
+    /// </summary>
+    /// <param name="money">сумма</param>
     public void CashIn(decimal money)
     {
         Cash += money;       
     }
 
-   
+   /// <summary>
+   /// Вывод информации о счете
+   /// </summary>
     public void Writeinfo()
     {
         Console.WriteLine($"Номер счета: {ID:d8};");

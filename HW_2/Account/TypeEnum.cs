@@ -1,4 +1,4 @@
-﻿namespace HW_2.Account
+﻿namespace OOP_Basics.Account
 {
     enum TypeEnum
     {
