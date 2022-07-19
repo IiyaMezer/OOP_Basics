@@ -6,9 +6,9 @@ public class DrivesList : Command
 {
     private readonly IUserInterface _userInterface;
 
-    public DrivesList(IUserInterface UserInterface)
+    public DrivesList(IUserInterface userInterface)
     {
-        _userInterface = UserInterface;
+        _userInterface = userInterface;
     }
 
     public override void Execute(string[] args)
