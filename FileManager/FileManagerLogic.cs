@@ -11,5 +11,20 @@ public class FileManagerLogic
     public void Start()
     {
         _Userinterface.Writeline("Манагер версия 1,0");
+
+        bool iswork = true;
+
+        do
+        {
+            var input = _Userinterface.ReadLine("Введите комманду: ");
+
+            if (input == "quit")
+                iswork = false;
+            else
+            {
+                _Userinterface.Writeline($"Введа комманда {input}");
+            }
+
+        } while (iswork);
     }
 }

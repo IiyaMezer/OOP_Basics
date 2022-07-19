@@ -1,7 +1,9 @@
 ﻿
 using FileManager;
 
-FileManagerLogic manager = new ();
+ConsoleUserInterface UI = new();
+
+FileManagerLogic manager = new(UI);
 
 manager.Start();
 
