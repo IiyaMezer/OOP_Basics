@@ -22,6 +22,7 @@ public class FileManagerLogic
             {"dir", new PrintDirectoryFiles(Userinterface , this)},
         };
     }
+
     public void Start()
     {
         _Userinterface.Writeline("Манагер версия 1,0");
@@ -34,8 +35,7 @@ public class FileManagerLogic
 
             var args = input.Split(' ');
 
-        }
+        } while (iswork);
+    }
 
-    } while (iswork);
-    
 }
