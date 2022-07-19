@@ -16,7 +16,7 @@ public class FileManagerLogic
 
         do
         {
-            var input = _Userinterface.ReadLine("Введите комманду: ");
+            var input = _Userinterface.ReadLine(">", false);
 
             if (input == "quit")
                 iswork = false;
