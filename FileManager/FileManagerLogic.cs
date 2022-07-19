@@ -23,11 +23,11 @@ public class FileManagerLogic
                     iswork = false;
                     break;
                 case "int":
-                    var int_value = _Userinterface.ReadInt("Введице целое число > ");
+                    var int_value = _Userinterface.ReadInt("Введите целое число > ");
                     _Userinterface.Writeline($"Введено число:{int_value}");
                     break;
                 case "double":
-                    var double_value = _Userinterface.ReadDouble("Введице вещетвенное число > ");
+                    var double_value = _Userinterface.ReadDouble("Введите вещественное число > ");
                     _Userinterface.Writeline($"Введено число:{double_value}");
                     break;
             }
