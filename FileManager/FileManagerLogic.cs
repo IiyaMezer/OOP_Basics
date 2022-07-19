@@ -1,12 +1,26 @@
 ﻿
+using FileManager.Сommands;
+using FileManager.Сommands.Base;
+
 namespace FileManager;
 public class FileManagerLogic
 {
     private readonly IUserInterface _Userinterface;
 
+    public DirectoryInfo CurrDir { get; set; } = new("c:\\");
+
+    public IReadOnlyDictionary<string, Command> Commands { get;}
+
+
     public FileManagerLogic(IUserInterface Userinterface)
     {
         _Userinterface = Userinterface;
+
+        Commands = new Dictionary<string, Command>
+        {
+            {"drives", new DrivesList(Userinterface)},
+            {"dir", new PrintDirectoryFiles(Userinterface , this)},
+        };
     }
     public void Start()
     {
@@ -17,20 +31,11 @@ public class FileManagerLogic
         do
         {
             var input = _Userinterface.ReadLine(">", false);
-            switch (input)
-            {
-                case "quit":
-                    iswork = false;
-                    break;
-                case "int":
-                    var int_value = _Userinterface.ReadInt("Введите целое число > ");
-                    _Userinterface.Writeline($"Введено число:{int_value}");
-                    break;
-                case "double":
-                    var double_value = _Userinterface.ReadDouble("Введите вещественное число > ");
-                    _Userinterface.Writeline($"Введено число:{double_value}");
-                    break;
-            }
-        } while (iswork);
-    }
+
+            var args = input.Split(' ');
+
+        }
+
+    } while (iswork);
+    
 }
