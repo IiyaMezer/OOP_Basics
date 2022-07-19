@@ -8,6 +8,11 @@ public interface IUserInterface
 
     string ReadLine (string? message, bool newline = true);
 
+    int ReadInt(string? message, bool newline = true);
+
+    double ReadDouble(string? message, bool newline = true);
+
+
 
 
 }
