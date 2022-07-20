@@ -34,6 +34,31 @@ public class FileManagerLogic
             var input = _Userinterface.ReadLine(">", false);
 
             var args = input.Split(' ');
+            var command_name = args[0];
+
+            if (command_name == "quit")
+            {
+                iswork = false;
+                continue;
+            }
+
+            if (!Commands.TryGetValue(command_name, out var command))
+            {
+                _Userinterface.Writeline($"Комманды {command_name} не существует,");
+                _Userinterface.Writeline("Для справки введие help, для выхда - quit");
+                continue;
+            }
+
+            try
+            {
+                command.Execute(args);
+            }
+            catch (Exception error)
+            {
+                _Userinterface.Writeline($"При выполнении {command_name} произошла ошибка:");
+                _Userinterface.Writeline(error.Message);
+                throw;
+            }
 
         } while (iswork);
     }
