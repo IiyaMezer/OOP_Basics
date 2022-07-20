@@ -30,6 +30,7 @@ public class FileManagerLogic
             {"?", help_command},
             {"quit", quit_command},
             {"exit", quit_command},
+            {"cd", new ChangeDir(Userinterface,this)},
 
         };
     }
