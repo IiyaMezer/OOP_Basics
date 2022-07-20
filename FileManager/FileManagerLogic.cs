@@ -31,13 +31,13 @@ public class FileManagerLogic
             {"quit", quit_command},
             {"exit", quit_command},
             {"cd", new ChangeDir(Userinterface,this)},
-
+            {"newdir", new CreateDir(Userinterface,this)},
         };
     }
 
     public void Start()
     {
-        _Userinterface.Writeline("Манагер версия 1,0");
+        _Userinterface.Writeline("Манагер версия 2,0");
 
         
         do
