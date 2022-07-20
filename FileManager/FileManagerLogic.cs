@@ -5,6 +5,9 @@ using FileManager.Сommands.Base;
 namespace FileManager;
 public class FileManagerLogic
 {
+
+    private bool _CanWork = true;
+
     private readonly IUserInterface _Userinterface;
 
     public DirectoryInfo CurrDir { get; set; } = new("c:\\");
@@ -16,10 +19,18 @@ public class FileManagerLogic
     {
         _Userinterface = Userinterface;
 
+        var help_command = new Help(Userinterface, this);
+        var quit_command = new Quit(this);
+
         Commands = new Dictionary<string, Command>
         {
             {"drives", new DrivesList(Userinterface)},
             {"dir", new PrintDirectoryFiles(Userinterface , this)},
+            {"help", help_command},
+            {"?", help_command},
+            {"quit", quit_command},
+            {"exit", quit_command},
+
         };
     }
 
@@ -27,20 +38,13 @@ public class FileManagerLogic
     {
         _Userinterface.Writeline("Манагер версия 1,0");
 
-        bool iswork = true;
-
+        
         do
         {
             var input = _Userinterface.ReadLine(">", false);
 
             var args = input.Split(' ');
             var command_name = args[0];
-
-            if (command_name == "quit")
-            {
-                iswork = false;
-                continue;
-            }
 
             if (!Commands.TryGetValue(command_name, out var command))
             {
@@ -60,7 +64,11 @@ public class FileManagerLogic
                 throw;
             }
 
-        } while (iswork);
+        } while (_CanWork);
     }
 
+    public void Stop()
+    {
+        _CanWork = false;
+    }
 }

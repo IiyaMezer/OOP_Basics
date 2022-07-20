@@ -8,4 +8,3 @@ FileManagerLogic manager = new(UI);
 manager.Start();
 
 Console.WriteLine("END...");
-Console.ReadLine();

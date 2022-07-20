@@ -6,6 +6,8 @@ public class DrivesList : Command
 {
     private readonly IUserInterface _userInterface;
 
+    public override string Description => "Вывод списка дисков в системе";
+
     public DrivesList(IUserInterface userInterface)
     {
         _userInterface = userInterface;

@@ -6,6 +6,7 @@ public class PrintDirectoryFiles : Command
 {
     private readonly IUserInterface _userInterface;
     private readonly FileManagerLogic _fileManager;
+    public override string Description => "Вывод вывод папок и файлов в указанной директории.";
 
     public PrintDirectoryFiles(IUserInterface userInterface, FileManagerLogic FileManager)
     {
