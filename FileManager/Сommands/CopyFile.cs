@@ -3,13 +3,13 @@
 
 namespace FileManager.Сommands;
 
-public class DeleteFile : Command
+public class CopyFile : Command
 {
     private readonly IUserInterface _UserInterface;
     private readonly FileManagerLogic _FileManager;
-    public override string Description => "Удаляет казанный файл";
+    public override string Description => "Копия файла по указанному пути.";
 
-    public DeleteFile(IUserInterface UserInterface, FileManagerLogic FileManager)
+    public CopyFile(IUserInterface UserInterface, FileManagerLogic FileManager)
     {
         _UserInterface = UserInterface;
         _FileManager = FileManager;
@@ -19,7 +19,7 @@ public class DeleteFile : Command
     {
         if (args.Length != 2 || string.IsNullOrWhiteSpace(args[1]))
         {
-            _UserInterface.Writeline("Необходимо указать имя файла.");
+            _UserInterface.Writeline("Необходимо указать имя папки.");
             return;
         }
 
