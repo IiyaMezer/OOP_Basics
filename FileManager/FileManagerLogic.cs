@@ -31,10 +31,10 @@ public class FileManagerLogic
             {"quit", quit_command},
             {"exit", quit_command},
             {"cd", new ChangeDir(Userinterface,this)},
-            {"newdir", new CreateDir(Userinterface,this)},
-            {"deldir", new DeleteDir(Userinterface,this)},
-            {"newfile", new CreateFile(Userinterface,this)},
-            {"delfile", new DeleteFile(Userinterface,this)},
+            {"nd", new CreateDir(Userinterface,this)},
+            {"dd", new DeleteDir(Userinterface,this)},
+            {"nf", new CreateFile(Userinterface,this)},
+            {"df", new DeleteFile(Userinterface,this)},
         };
     }
 
