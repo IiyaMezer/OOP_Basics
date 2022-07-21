@@ -38,9 +38,7 @@ public class CreateFile : Command
             return;
         }
 
-        //file.Create();
-
-        using (File.Create(file_path));
+        File.Create(file_path).Dispose();
 
         _UserInterface.Writeline($"Создан файл с именем {file.FullName}.");
     }
