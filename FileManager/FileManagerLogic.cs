@@ -65,7 +65,9 @@ public class FileManagerLogic
             {
                 _Userinterface.Writeline($"При выполнении {command_name} произошла ошибка:");
                 _Userinterface.Writeline(error.Message);
+                //throw;
                 continue;
+
             }
 
         } while (_CanWork);
