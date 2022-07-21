@@ -32,6 +32,8 @@ public class FileManagerLogic
             {"exit", quit_command},
             {"cd", new ChangeDir(Userinterface,this)},
             {"newdir", new CreateDir(Userinterface,this)},
+            {"deldir", new DeleteDir(Userinterface,this)},
+
         };
     }
 
