@@ -33,6 +33,8 @@ public class FileManagerLogic
             {"cd", new ChangeDir(Userinterface,this)},
             {"newdir", new CreateDir(Userinterface,this)},
             {"deldir", new DeleteDir(Userinterface,this)},
+            {"newfile", new CreateFile(Userinterface,this)},
+
 
         };
     }

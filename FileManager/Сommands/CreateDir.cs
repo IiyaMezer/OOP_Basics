@@ -39,6 +39,5 @@ public class CreateDir : Command
         directory.Create();
 
         _UserInterface.Writeline($"Создана папка с именем {directory.FullName}.");
-
     }
 }
