@@ -53,7 +53,5 @@ public class ChangeDir : Command
         _UserInterface.Writeline($"Переключение на директорию {directory.FullName} успешно");
 
         Directory.SetCurrentDirectory(directory.FullName);
-
-
     }
 }
