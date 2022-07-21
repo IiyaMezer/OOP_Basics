@@ -53,7 +53,7 @@ public class CopyFile : Command
         return suff;
     }
     /// <summary>
-    /// Добавляет в файл формат.
+    /// Возвращает формат файла
     /// </summary>
     /// <param name="str"></param>
     /// <returns></returns>
