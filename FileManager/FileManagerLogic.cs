@@ -35,6 +35,8 @@ public class FileManagerLogic
             {"dd", new DeleteDir(Userinterface,this)},
             {"nf", new CreateFile(Userinterface,this)},
             {"df", new DeleteFile(Userinterface,this)},
+            {"cf", new CopyFile(Userinterface,this)},
+
         };
     }
 
