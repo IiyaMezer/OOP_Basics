@@ -1,4 +1,5 @@
-﻿using FileManager.Сommands.Base;
+﻿using System.IO;
+using FileManager.Сommands.Base;
 
 namespace FileManager.Сommands;
 
@@ -37,7 +38,9 @@ public class CreateFile : Command
             return;
         }
 
-        file.Create();
+        //file.Create();
+
+        using (File.Create(file_path)) { }
 
         _UserInterface.Writeline($"Создан файл с именем {file.FullName}.");
     }

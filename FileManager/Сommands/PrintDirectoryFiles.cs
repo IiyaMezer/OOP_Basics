@@ -39,7 +39,7 @@ public class PrintDirectoryFiles : Command
     public override void Execute(string[] args)
     {
         var directory = _fileManager.CurrDir;
-        _userInterface.Writeline($"Содержимое папки{directory}: ");
+        _userInterface.Writeline($"Содержимое папки {directory} : ");
 
         var dirsCount = 0;
         foreach (var sub_dir in directory.EnumerateDirectories())
