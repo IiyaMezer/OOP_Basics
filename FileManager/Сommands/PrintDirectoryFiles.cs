@@ -34,8 +34,6 @@ public class PrintDirectoryFiles : Command
                 Size += DirSize(di);
 
             return (Size);
-        
-
     }
 
     public override void Execute(string[] args)

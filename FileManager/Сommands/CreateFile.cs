@@ -18,7 +18,7 @@ public class CreateFile : Command
     {
         if (args.Length != 2 || string.IsNullOrWhiteSpace(args[1]))
         {
-            _UserInterface.Writeline("Необходимо указать имя папки.");
+            _UserInterface.Writeline("Необходимо указать имя файла.");
             return;
         }
 
