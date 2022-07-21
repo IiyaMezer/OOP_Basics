@@ -40,7 +40,7 @@ public class CreateFile : Command
 
         //file.Create();
 
-        using (File.Create(file_path)) { }
+        using (File.Create(file_path));
 
         _UserInterface.Writeline($"Создан файл с именем {file.FullName}.");
     }
