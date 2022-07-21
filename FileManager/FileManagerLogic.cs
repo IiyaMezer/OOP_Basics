@@ -34,8 +34,7 @@ public class FileManagerLogic
             {"newdir", new CreateDir(Userinterface,this)},
             {"deldir", new DeleteDir(Userinterface,this)},
             {"newfile", new CreateFile(Userinterface,this)},
-
-
+            {"delfile", new DeleteFile(Userinterface,this)},
         };
     }
 
@@ -66,7 +65,7 @@ public class FileManagerLogic
             {
                 _Userinterface.Writeline($"При выполнении {command_name} произошла ошибка:");
                 _Userinterface.Writeline(error.Message);
-                throw;
+                continue;
             }
 
         } while (_CanWork);
