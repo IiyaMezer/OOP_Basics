@@ -22,17 +22,20 @@ public class PrintDirectoryFiles : Command
     /// <returns>размер в байтах</returns>
     private long DirSize(DirectoryInfo directory)
     {
-        long Size = 0;
-        
-        FileInfo[] fis = directory.GetFiles();
-        foreach (FileInfo fi in fis)
-            Size += fi.Length;
 
-        DirectoryInfo[] dis = directory.GetDirectories();
-        foreach (DirectoryInfo di in dis)
-            Size += DirSize(di);
+        long Size = 0;
+
+            FileInfo[] fis = directory.GetFiles();
+            foreach (FileInfo fi in fis)
+                Size += fi.Length;
+
+            DirectoryInfo[] dis = directory.GetDirectories();
+            foreach (DirectoryInfo di in dis)
+                Size += DirSize(di);
+
+            return (Size);
         
-        return (Size);
+
     }
 
     public override void Execute(string[] args)

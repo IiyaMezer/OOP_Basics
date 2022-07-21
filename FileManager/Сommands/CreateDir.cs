@@ -40,6 +40,5 @@ public class CreateDir : Command
 
         _UserInterface.Writeline($"Создана папка с именем {directory.FullName}.");
 
-        Directory.SetCurrentDirectory(directory.FullName);
     }
 }

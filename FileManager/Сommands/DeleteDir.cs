@@ -14,6 +14,26 @@ public class DeleteDir : Command
         _FileManager = FileManager;
     }
 
+    /// <summary>
+    /// Рекусивное удаление, можно было восползоваться методом .delete( , true),
+    /// но я о нем узнал уполе написания этого метода.
+    /// </summary>
+    /// <param name="directory">папка</param>
+    private void DelDir(DirectoryInfo directory)
+    {
+        DirectoryInfo[] subdirs = directory.GetDirectories();
+        FileInfo[] files = directory.GetFiles();
+        foreach (FileInfo file in files)
+        {
+            file.Delete();
+        }
+        foreach (DirectoryInfo df in subdirs)
+        {
+            DelDir(df);
+        }
+        if (directory.GetDirectories().Length == 0 && directory.GetFiles().Length == 0) directory.Delete();
+    }
+
     public override void Execute(string[] args)
     {
         if (args.Length != 2 || string.IsNullOrWhiteSpace(args[1]))
@@ -37,10 +57,9 @@ public class DeleteDir : Command
             return;
         }
 
-        directory.Delete();
+        DelDir(directory);
 
         _UserInterface.Writeline($"Папка {directory.FullName} удалена.");
 
-        Directory.SetCurrentDirectory(directory.FullName);
     }
 }
