@@ -7,7 +7,7 @@ public class CopyFile : Command
 {
     private readonly IUserInterface _UserInterface;
     private readonly FileManagerLogic _FileManager;
-    public override string Description => "Копия файла по указанному пути.";
+    public override string Description => "Копия файла.";
 
     public CopyFile(IUserInterface UserInterface, FileManagerLogic FileManager)
     {
