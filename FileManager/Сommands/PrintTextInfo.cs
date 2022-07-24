@@ -60,9 +60,9 @@ public class PrintTextInfo : Command
     private int CharCount(FileInfo file)
     {
         int charCount = 0;
-        using (var reader = new StreamReader(file.FullName))
+        using (var textfile = new StreamReader(file.FullName))
         {
-            while (reader.Read() > -1)
+            while (textfile.Read() > -1)
             {
                 charCount++;
             }
