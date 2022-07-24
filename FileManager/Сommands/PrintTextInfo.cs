@@ -1,6 +1,8 @@
-﻿using FileManager.Сommands.Base;
+﻿using System.Runtime.InteropServices.ComTypes;
+using FileManager.Сommands.Base;
 
-namespace FileManager.Сommands; 
+namespace FileManager.Сommands;
+
 public class PrintTextInfo : Command
 {
     private readonly IUserInterface _UserInterface;
@@ -12,9 +14,53 @@ public class PrintTextInfo : Command
         _UserInterface = UserInterface;
         _FileManager = FileManager;
     }
+    /// <summary>
+    /// Расчет количества строк
+    /// </summary>
+    /// <param name="file">анализируемы файл</param>
+    /// <returns>кол-во строк</returns>
+    private int LinesCount(FileInfo file)
+    {
+        int count = 0;
+
+        using (StreamReader reader = new StreamReader(file.Name))
+        {
+            string? line;
+
+            while ((line = reader.ReadLine()) != null)
+            {
+                count++;
+            }
+        }
+        return count;
+    }
 
     public override void Execute(string[] args)
     {
-        throw new NotImplementedException();
+        if (args.Length != 2 || string.IsNullOrWhiteSpace(args[1]))
+        {
+            _UserInterface.Writeline("Укажите файл в текущей директории.");
+            return;
+        }
+
+        var file_path = args[1];
+
+        FileInfo file;
+
+        if (!Path.IsPathRooted(file_path))
+            file_path = Path.Combine(_FileManager.CurrDir.FullName, file_path);
+
+        file = new FileInfo(file_path);
+
+        if (!file.Exists)
+        {
+            _UserInterface.Writeline("Файла в текущей директории не существует.");
+            return;
+        }
+        _UserInterface.Writeline($"Количество строк в файле {file.Name}:{LinesCount(file)} ");
     }
+
+    
+
+    
 }
