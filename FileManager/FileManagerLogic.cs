@@ -12,7 +12,7 @@ public class FileManagerLogic
 
     public DirectoryInfo CurrDir { get; set; } = new("c:\\");
 
-    public IReadOnlyDictionary<string, Command> Commands { get;}
+    public IReadOnlyDictionary<string, Command> Commands { get; }
 
 
     public FileManagerLogic(IUserInterface Userinterface)
@@ -24,19 +24,19 @@ public class FileManagerLogic
 
         Commands = new Dictionary<string, Command>
         {
-            {"drives", new DrivesList(Userinterface)},
-            {"dir", new PrintDirectoryFiles(Userinterface , this)},
-            {"help", help_command},
-            {"?", help_command},
-            {"quit", quit_command},
-            {"exit", quit_command},
-            {"cd", new ChangeDir(Userinterface,this)},
-            {"nd", new CreateDir(Userinterface,this)},
-            {"dd", new DeleteDir(Userinterface,this)},
-            {"nf", new CreateFile(Userinterface,this)},
-            {"df", new DeleteFile(Userinterface,this)},
-            {"cf", new CopyFile(Userinterface,this)},
-            {"textinf", new PrintTextInfo(Userinterface,this)},
+            { "drives", new DrivesList(Userinterface) },
+            { "dir", new PrintDirectoryFiles(Userinterface, this) },
+            { "help", help_command },
+            { "?", help_command },
+            { "quit", quit_command },
+            { "exit", quit_command },
+            { "cd", new ChangeDir(Userinterface, this) },
+            { "nd", new CreateDir(Userinterface, this) },
+            { "dd", new DeleteDir(Userinterface, this) },
+            { "nf", new CreateFile(Userinterface, this) },
+            { "df", new DeleteFile(Userinterface, this) },
+            { "cf", new CopyFile(Userinterface, this) },
+            { "textinf", new PrintTextInfo(Userinterface, this) }
 
 
         };
@@ -46,7 +46,7 @@ public class FileManagerLogic
     {
         _Userinterface.Writeline("Манагер версия 2,0");
 
-        
+
         do
         {
             var input = _Userinterface.ReadLine(">", false);
@@ -57,7 +57,7 @@ public class FileManagerLogic
             if (!Commands.TryGetValue(command_name, out var command))
             {
                 _Userinterface.Writeline($"Комманды {command_name} не существует,");
-                _Userinterface.Writeline("Для справки введие help, для выхда - quit");
+                _Userinterface.Writeline("Для справки введие help, для выхода - quit");
                 continue;
             }
 
