@@ -44,7 +44,7 @@ public class PrintTextInfo : Command
         int count = 0;
         string s = "";
 
-        string[] textMass;
+        string[] text;
 
         using (StreamReader textfile = new StreamReader(file.Name))
         {
@@ -52,10 +52,22 @@ public class PrintTextInfo : Command
             {
                 s += textfile.ReadLine();
             }
-            textMass = s.Split(' ');
-            textfile.Close();
+            text = s.Split(' ');
         }
-        return textMass.Length;
+        return text.Length;
+    }
+
+    private int CharCount(FileInfo file)
+    {
+        int charCount = 0;
+        using (var reader = new StreamReader(file.FullName))
+        {
+            while (reader.Read() > -1)
+            {
+                charCount++;
+            }
+        }
+        return charCount;
     }
 
     public override void Execute(string[] args)
@@ -80,7 +92,9 @@ public class PrintTextInfo : Command
             _UserInterface.Writeline("Файла в текущей директории не существует.");
             return;
         }
-        _UserInterface.Writeline($"Количество строк в файле {file.Name}: {LinesCount(file)}\r\nКоличество слов в файле {file.Name}:  {WordsCount(file)}");
+        _UserInterface.Writeline($"   Количество строк в файле {file.Name}:     {LinesCount(file)}");
+        _UserInterface.Writeline($"   Количество слов в файле {file.Name}:      {WordsCount(file)}");
+        _UserInterface.Writeline($"   Количество символов в файле {file.Name}:  {CharCount(file)}");
     }
 
 
