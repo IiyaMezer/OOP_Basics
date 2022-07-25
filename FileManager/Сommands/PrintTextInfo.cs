@@ -92,9 +92,9 @@ public class PrintTextInfo : Command
             _UserInterface.Writeline("Файла в текущей директории не существует.");
             return;
         }
-        _UserInterface.Writeline($"   Количество строк в файле {file.Name}:     {LinesCount(file)}");
-        _UserInterface.Writeline($"   Количество слов в файле {file.Name}:      {WordsCount(file)}");
-        _UserInterface.Writeline($"   Количество символов в файле {file.Name}:  {CharCount(file)}");
+        _UserInterface.Writeline($"\tКоличество строк в файле {file.Name}:     {LinesCount(file)}");
+        _UserInterface.Writeline($"\tКоличество слов в файле {file.Name}:      {WordsCount(file)}");
+        _UserInterface.Writeline($"\tКоличество символов в файле {file.Name}:  {CharCount(file)}");
     }
 
 
