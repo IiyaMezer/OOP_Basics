@@ -56,7 +56,7 @@ public class FileManagerLogic
 
             if (!Commands.TryGetValue(command_name, out var command))
             {
-                _Userinterface.Writeline($"Комманды {command_name} не существует,");
+                _Userinterface.Writeline($"Команды {command_name} не существует,");
                 _Userinterface.Writeline("Для справки введие help, для выхода - quit");
                 continue;
             }
