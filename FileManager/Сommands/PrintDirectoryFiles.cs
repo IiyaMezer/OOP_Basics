@@ -44,7 +44,7 @@ public class PrintDirectoryFiles : Command
         var dirsCount = 0;
         foreach (var sub_dir in directory.EnumerateDirectories())
         {
-            _userInterface.Writeline($"    d    {sub_dir.Name}");
+            _userInterface.Writeline($"\td\t{sub_dir.Name}\t{DirSize(sub_dir)}");
             dirsCount++;
         }
 
@@ -53,7 +53,7 @@ public class PrintDirectoryFiles : Command
 
         foreach (var file in directory.EnumerateFiles())
         {
-            _userInterface.Writeline($"    f    {file.Name}\t{file.Length}");
+            _userInterface.Writeline($"\tf\t{file.Name}\t{file.Length}");
             filesCount++;
             total_Length += file.Length;
         }

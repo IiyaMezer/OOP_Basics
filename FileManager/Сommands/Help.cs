@@ -21,7 +21,7 @@ namespace FileManager.Сommands
         }
         public override void Execute(string[] args)
         {
-            _UserInterface.Writeline("Поддерживаются следующие комманды:");
+            _UserInterface.Writeline("Поддерживаются следующие команды:");
 
             foreach (var (name, command) in _fileManager.Commands)
             {
