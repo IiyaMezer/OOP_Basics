@@ -25,9 +25,7 @@ public class PrintTextInfo : Command
 
         using (StreamReader textfile = new StreamReader(file.Name))
         {
-            string? line;
-
-            while ((line = textfile.ReadLine()) != null)
+            while (textfile.ReadLine() is { })
             {
                 count++;
             }
