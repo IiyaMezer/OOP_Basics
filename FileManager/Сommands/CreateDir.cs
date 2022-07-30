@@ -35,9 +35,20 @@ public class CreateDir : Command
             _UserInterface.Writeline("Директория с таким именем существует.");
             return;
         }
-        
-        directory.Create();
 
-        _UserInterface.Writeline($"Создана папка с именем {directory.FullName}.");
+        try
+        {
+            directory.Create();
+            _UserInterface.Writeline($"Создана папка с именем {directory.FullName}.");
+        }
+        catch (Exception error)
+        {
+            _UserInterface.Writeline($"Произошла ошибка:");
+            _UserInterface.Writeline(error.Message);
+            throw;
+            //continue;
+        }
+
+
     }
 }
