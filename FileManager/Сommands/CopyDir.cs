@@ -40,7 +40,7 @@ public class CopyDir : Command
 
         foreach (FileInfo file in directory.GetFiles())
         {
-            File.Copy(file.FullName, dir_path + "\\" + file.Name, true);
+            File.Copy(file.FullName, Path.Combine(dir_path, file.Name), true);
         }
 
         _UserInterface.Writeline($"Папка {directory.FullName} скопирована.");
