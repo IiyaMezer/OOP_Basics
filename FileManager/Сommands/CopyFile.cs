@@ -22,12 +22,7 @@ public class CopyFile : Command
     /// <returns>имя файла без формата</returns>
     private string RemoveEnd(string str)
     {
-        if (str.Length < 4)
-        {
-            return string.Empty;
-        }
-
-        return str[..^4];
+        return Path.GetFileNameWithoutExtension(str);
     }
 
     /// <summary>
