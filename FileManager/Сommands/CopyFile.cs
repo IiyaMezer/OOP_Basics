@@ -55,7 +55,7 @@ public class CopyFile : Command
     private string AddFormat(string str)
     {
         
-        return str.Substring(str.Length - 4);
+        return Path.GetExtension(str);
     }
     public override void Execute(string[] args)
     {
